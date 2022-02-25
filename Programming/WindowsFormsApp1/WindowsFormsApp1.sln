@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{C2F17D24-59D0-4904-A885-FA218F503691}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobel", "Mobel", "{2D8CD35B-3795-40A1-9553-3EB561159DC4}"
+	ProjectSection(SolutionItems) = preProject
+		Weekday.cs = Weekday.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{30DB4DC5-68E0-4232-9E3A-D56D84774C07}"
 	ProjectSection(SolutionItems) = preProject
