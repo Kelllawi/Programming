@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{C2F17D24-59D0-4904-A885-FA218F503691}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobel", "Mobel", "{2D8CD35B-3795-40A1-9553-3EB561159DC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{30DB4DC5-68E0-4232-9E3A-D56D84774C07}"
+	ProjectSection(SolutionItems) = preProject
+		WindowsFormsApp1\MainForm.cs = WindowsFormsApp1\MainForm.cs
+		WindowsFormsApp1\MainForm.Designer.cs = WindowsFormsApp1\MainForm.Designer.cs
+		WindowsFormsApp1\MainForm.resx = WindowsFormsApp1\MainForm.resx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2F17D24-59D0-4904-A885-FA218F503691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F17D24-59D0-4904-A885-FA218F503691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F17D24-59D0-4904-A885-FA218F503691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F17D24-59D0-4904-A885-FA218F503691}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD15A413-1671-4286-AE63-0FA3D6650D13}
+	EndGlobalSection
+EndGlobal
