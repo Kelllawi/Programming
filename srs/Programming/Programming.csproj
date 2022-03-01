@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C2F17D24-59D0-4904-A885-FA218F503691}</ProjectGuid>
+    <ProjectGuid>{0B848DC3-EF75-4611-9F2C-E0CC3C568291}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp1</RootNamespace>
-    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <RootNamespace>WindowsFormsApp5</RootNamespace>
+    <AssemblyName>WindowsFormsApp5</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,7 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\CodeFile1.cs" />
+    <Compile Include="Model\Manufactures.cs" />
+    <Compile Include="Model\Colors.cs" />
+    <Compile Include="Model\EducationForm.cs" />
+    <Compile Include="Model\Seasons.cs" />
+    <Compile Include="Model\Genre.cs" />
+    <Compile Include="Model\Weekday.cs" />
+    <Compile Include="View\Enums.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
