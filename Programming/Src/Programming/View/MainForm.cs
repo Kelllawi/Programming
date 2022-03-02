@@ -21,12 +21,14 @@ namespace Programming.View
                 EnumsListBox.Items.Add(enumsValues);
             }
             EnumsListBox.SelectedIndex = 0;
+
             Array initSeasonValues = Enum.GetValues(typeof(Seasons));
             foreach (Seasons value in initSeasonValues)
             {
-                SeasonscomboBox.Items.Add(value);
+                SeasonsComboBox.Items.Add(value);
             }
-            SeasonscomboBox.SelectedIndex = 0;
+
+            SeasonsComboBox.SelectedIndex = 0;
         }
 
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -38,22 +40,22 @@ namespace Programming.View
 
             switch (item)
             {
-                case Enums.Color:
+                case View.Enums.Color:
                     values = Enum.GetValues(typeof(Seasons));
                     break;
-                case Enums.Genre:
+                case View.Enums.Genre:
                     values = Enum.GetValues(typeof(Genre));
                     break;
-                case Enums.EducationForm:
+                case View.Enums.EducationForm:
                     values = Enum.GetValues(typeof(EducationForm));
                     break;
-                case Enums.Manufactures:
+                case View.Enums.Manufactures:
                     values = Enum.GetValues(typeof(Manufactures));
                     break;
-                case Enums.Seasons:
+                case View.Enums.Seasons:
                     values = Enum.GetValues(typeof(Seasons));
                     break;
-                case Enums.Weekday:
+                case View.Enums.Weekday:
                     values = Enum.GetValues(typeof(Weekday));
                     break;
                 default:
@@ -89,7 +91,7 @@ namespace Programming.View
 
         private void Gobutton_Click(object sender, EventArgs e)
         {
-            var value = SeasonscomboBox.SelectedItem;
+            var value = SeasonsComboBox.SelectedItem;
             switch (value)
             {
                 case Seasons.Winter:
