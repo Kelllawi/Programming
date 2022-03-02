@@ -46,11 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\CodeFile1 - Копировать %282%29.cs" />
-    <Compile Include="Model\CodeFile1 - Копировать %283%29.cs" />
-    <Compile Include="Model\CodeFile1 - Копировать.cs" />
-    <Compile Include="Model\CodeFile1.cs" />
-    <Compile Include="Model\CodeFile2.cs" />
+    <Compile Include="Model\Manufactures.cs" />
+    <Compile Include="Model\EducationForm.cs" />
+    <Compile Include="Model\Colors.cs" />
+    <Compile Include="Model\Weekday.cs" />
+    <Compile Include="Model\Seasons.cs" />
+    <Compile Include="View\CodeFile1.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
