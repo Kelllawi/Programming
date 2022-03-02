@@ -2,12 +2,10 @@
 {
     public enum Genre
     {
-        Monday,
-        Tuesday,
-        Wednesday,
-        Thursday,
-        Friday,
-        Saturday,
-        Sunday
+        Comedy,
+        Acton,
+        Triller,
+        Drama,
+        Blockbuster
     }
 }
