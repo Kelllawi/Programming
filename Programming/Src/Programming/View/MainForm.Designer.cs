@@ -60,7 +60,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(769, 469);
+            this.tabControl1.Size = new System.Drawing.Size(694, 451);
             this.tabControl1.TabIndex = 1;
             // 
             // Enums
@@ -71,7 +71,7 @@
             this.Enums.Location = new System.Drawing.Point(4, 22);
             this.Enums.Name = "Enums";
             this.Enums.Padding = new System.Windows.Forms.Padding(3);
-            this.Enums.Size = new System.Drawing.Size(761, 443);
+            this.Enums.Size = new System.Drawing.Size(686, 425);
             this.Enums.TabIndex = 0;
             this.Enums.Text = "Enums";
             this.Enums.UseVisualStyleBackColor = true;
@@ -235,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 469);
+            this.ClientSize = new System.Drawing.Size(694, 451);
             this.Controls.Add(this.tabControl1);
             this.Name = "MainForm";
             this.Text = "Programming Demo";
