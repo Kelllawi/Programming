@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp5
+﻿namespace Programming.View
 {
     partial class MainForm
     {
@@ -69,7 +69,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Enums";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // groupBox1
             // 
@@ -83,7 +82,7 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Weekday Parsing";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
+            
             // 
             // label5
             // 
@@ -119,7 +118,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(189, 21);
             this.comboBox2.TabIndex = 14;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            
             // 
             // Weekday
             // 
@@ -133,7 +132,7 @@
             this.Weekday.TabIndex = 15;
             this.Weekday.TabStop = false;
             this.Weekday.Text = "Weekday Parsing";
-            this.Weekday.Enter += new System.EventHandler(this.Weekday_Enter);
+           
             // 
             // label4
             // 
@@ -150,7 +149,7 @@
             this.WeekTextbox.Name = "WeekTextbox";
             this.WeekTextbox.Size = new System.Drawing.Size(190, 20);
             this.WeekTextbox.TabIndex = 9;
-            this.WeekTextbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            
             // 
             // ParseInput
             // 
@@ -169,7 +168,7 @@
             this.OutLabelWeekday.Name = "OutLabelWeekday";
             this.OutLabelWeekday.Size = new System.Drawing.Size(0, 13);
             this.OutLabelWeekday.TabIndex = 11;
-            this.OutLabelWeekday.Click += new System.EventHandler(this.OutLabel_Click);
+            
             // 
             // label3
             // 
@@ -195,7 +194,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 6;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+           
             // 
             // label1
             // 
@@ -244,7 +243,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "MainForm";
             this.Text = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+           
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

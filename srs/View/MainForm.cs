@@ -8,9 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Programming.Model;
-using Programming.View;
 
-namespace WindowsFormsApp5
+namespace Programming.View
 {
     public partial class MainForm : Form
     {
@@ -34,20 +33,7 @@ namespace WindowsFormsApp5
 
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -95,20 +81,7 @@ namespace WindowsFormsApp5
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void ParseInput_Click(object sender, EventArgs e)
         {
@@ -125,10 +98,7 @@ namespace WindowsFormsApp5
             }
         }
 
-        private void OutLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Gobutton_Click(object sender, EventArgs e)
         {
@@ -155,25 +125,7 @@ namespace WindowsFormsApp5
 
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Weekday_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
 
