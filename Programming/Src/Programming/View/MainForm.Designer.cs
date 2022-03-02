@@ -172,7 +172,7 @@
             this.GoButton.Name = "GoButton";
             this.GoButton.Size = new System.Drawing.Size(75, 23);
             this.GoButton.TabIndex = 13;
-            this.GoButton.Text = "GO!";
+            this.GoButton.Text = "Go!";
             this.GoButton.UseVisualStyleBackColor = true;
             this.GoButton.Click += new System.EventHandler(this.Gobutton_Click);
             // 
