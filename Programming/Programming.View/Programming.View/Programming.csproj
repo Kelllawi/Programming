@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\CodeFile1 - Копировать %282%29.cs" />
+    <Compile Include="Model\CodeFile1 - Копировать %283%29.cs" />
+    <Compile Include="Model\CodeFile1 - Копировать.cs" />
+    <Compile Include="Model\CodeFile1.cs" />
+    <Compile Include="Model\CodeFile2.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,8 +84,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
