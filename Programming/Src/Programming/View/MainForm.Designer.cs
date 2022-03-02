@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.TabContol = new System.Windows.Forms.TabControl();
             this.Enums = new System.Windows.Forms.TabPage();
             this.Enumerations = new System.Windows.Forms.GroupBox();
             this.ValueListBox = new System.Windows.Forms.ListBox();
@@ -46,22 +46,22 @@
             this.WeekTextbox = new System.Windows.Forms.TextBox();
             this.ParseInputButton = new System.Windows.Forms.Button();
             this.OutLabelWeekday = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.TabContol.SuspendLayout();
             this.Enums.SuspendLayout();
             this.Enumerations.SuspendLayout();
             this.SeasonHandle.SuspendLayout();
             this.Weekday.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // TabContol
             // 
-            this.tabControl1.Controls.Add(this.Enums);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(694, 451);
-            this.tabControl1.TabIndex = 1;
+            this.TabContol.Controls.Add(this.Enums);
+            this.TabContol.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabContol.Location = new System.Drawing.Point(0, 0);
+            this.TabContol.Name = "TabContol";
+            this.TabContol.SelectedIndex = 0;
+            this.TabContol.Size = new System.Drawing.Size(694, 451);
+            this.TabContol.TabIndex = 1;
             // 
             // Enums
             // 
@@ -236,10 +236,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 451);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.TabContol);
             this.Name = "MainForm";
             this.Text = "Programming Demo";
-            this.tabControl1.ResumeLayout(false);
+            this.TabContol.ResumeLayout(false);
             this.Enums.ResumeLayout(false);
             this.Enumerations.ResumeLayout(false);
             this.Enumerations.PerformLayout();
@@ -253,7 +253,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl TabContol;
         private System.Windows.Forms.TabPage Enums;
         private System.Windows.Forms.GroupBox SeasonHandle;
         private System.Windows.Forms.Label ChooseSeason;
