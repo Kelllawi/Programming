@@ -37,8 +37,8 @@
             this.ChooseValue = new System.Windows.Forms.Label();
             this.IntBox = new System.Windows.Forms.TextBox();
             this.ChooseEnumeration = new System.Windows.Forms.Label();
-            this.WeekdayParsing = new System.Windows.Forms.GroupBox();
-            this.TypeValueForParsig = new System.Windows.Forms.Label();
+            this.SeasonHandle = new System.Windows.Forms.GroupBox();
+            this.ChooseSeason = new System.Windows.Forms.Label();
             this.GoButton = new System.Windows.Forms.Button();
             this.SeasonsComboBox = new System.Windows.Forms.ComboBox();
             this.Weekday = new System.Windows.Forms.GroupBox();
@@ -49,7 +49,7 @@
             this.tabControl1.SuspendLayout();
             this.Enums.SuspendLayout();
             this.Enumerations.SuspendLayout();
-            this.WeekdayParsing.SuspendLayout();
+            this.SeasonHandle.SuspendLayout();
             this.Weekday.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             // Enums
             // 
             this.Enums.Controls.Add(this.Enumerations);
-            this.Enums.Controls.Add(this.WeekdayParsing);
+            this.Enums.Controls.Add(this.SeasonHandle);
             this.Enums.Controls.Add(this.Weekday);
             this.Enums.Location = new System.Drawing.Point(4, 22);
             this.Enums.Name = "Enums";
@@ -123,7 +123,7 @@
             // ChooseValue
             // 
             this.ChooseValue.AutoSize = true;
-            this.ChooseValue.Location = new System.Drawing.Point(180, 25);
+            this.ChooseValue.Location = new System.Drawing.Point(178, 25);
             this.ChooseValue.Name = "ChooseValue";
             this.ChooseValue.Size = new System.Drawing.Size(76, 13);
             this.ChooseValue.TabIndex = 8;
@@ -139,32 +139,32 @@
             // ChooseEnumeration
             // 
             this.ChooseEnumeration.AutoSize = true;
-            this.ChooseEnumeration.Location = new System.Drawing.Point(8, 25);
+            this.ChooseEnumeration.Location = new System.Drawing.Point(7, 25);
             this.ChooseEnumeration.Name = "ChooseEnumeration";
             this.ChooseEnumeration.Size = new System.Drawing.Size(107, 13);
             this.ChooseEnumeration.TabIndex = 7;
             this.ChooseEnumeration.Text = "Choose enumeration:";
             // 
-            // WeekdayParsing
+            // SeasonHandle
             // 
-            this.WeekdayParsing.Controls.Add(this.TypeValueForParsig);
-            this.WeekdayParsing.Controls.Add(this.GoButton);
-            this.WeekdayParsing.Controls.Add(this.SeasonsComboBox);
-            this.WeekdayParsing.Location = new System.Drawing.Point(358, 315);
-            this.WeekdayParsing.Name = "WeekdayParsing";
-            this.WeekdayParsing.Size = new System.Drawing.Size(320, 100);
-            this.WeekdayParsing.TabIndex = 16;
-            this.WeekdayParsing.TabStop = false;
-            this.WeekdayParsing.Text = "Weekday Parsing";
+            this.SeasonHandle.Controls.Add(this.ChooseSeason);
+            this.SeasonHandle.Controls.Add(this.GoButton);
+            this.SeasonHandle.Controls.Add(this.SeasonsComboBox);
+            this.SeasonHandle.Location = new System.Drawing.Point(358, 315);
+            this.SeasonHandle.Name = "SeasonHandle";
+            this.SeasonHandle.Size = new System.Drawing.Size(320, 100);
+            this.SeasonHandle.TabIndex = 16;
+            this.SeasonHandle.TabStop = false;
+            this.SeasonHandle.Text = "Season Handle";
             // 
-            // TypeValueForParsig
+            // ChooseSeason
             // 
-            this.TypeValueForParsig.AutoSize = true;
-            this.TypeValueForParsig.Location = new System.Drawing.Point(6, 28);
-            this.TypeValueForParsig.Name = "TypeValueForParsig";
-            this.TypeValueForParsig.Size = new System.Drawing.Size(116, 13);
-            this.TypeValueForParsig.TabIndex = 11;
-            this.TypeValueForParsig.Text = "Type value for Parsing:";
+            this.ChooseSeason.AutoSize = true;
+            this.ChooseSeason.Location = new System.Drawing.Point(6, 28);
+            this.ChooseSeason.Name = "ChooseSeason";
+            this.ChooseSeason.Size = new System.Drawing.Size(82, 13);
+            this.ChooseSeason.TabIndex = 11;
+            this.ChooseSeason.Text = "Choose Season";
             // 
             // GoButton
             // 
@@ -243,8 +243,8 @@
             this.Enums.ResumeLayout(false);
             this.Enumerations.ResumeLayout(false);
             this.Enumerations.PerformLayout();
-            this.WeekdayParsing.ResumeLayout(false);
-            this.WeekdayParsing.PerformLayout();
+            this.SeasonHandle.ResumeLayout(false);
+            this.SeasonHandle.PerformLayout();
             this.Weekday.ResumeLayout(false);
             this.Weekday.PerformLayout();
             this.ResumeLayout(false);
@@ -255,8 +255,8 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Enums;
-        private System.Windows.Forms.GroupBox WeekdayParsing;
-        private System.Windows.Forms.Label TypeValueForParsig;
+        private System.Windows.Forms.GroupBox SeasonHandle;
+        private System.Windows.Forms.Label ChooseSeason;
         private System.Windows.Forms.Button GoButton;
         private System.Windows.Forms.ComboBox SeasonsComboBox;
         private System.Windows.Forms.GroupBox Weekday;
