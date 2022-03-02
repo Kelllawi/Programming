@@ -95,7 +95,7 @@
             // ValueListBox
             // 
             this.ValueListBox.FormattingEnabled = true;
-            this.ValueListBox.Location = new System.Drawing.Point(178, 37);
+            this.ValueListBox.Location = new System.Drawing.Point(180, 40);
             this.ValueListBox.Name = "ValueListBox";
             this.ValueListBox.Size = new System.Drawing.Size(150, 225);
             this.ValueListBox.TabIndex = 1;
@@ -105,7 +105,7 @@
             // EnumsListBox
             // 
             this.EnumsListBox.FormattingEnabled = true;
-            this.EnumsListBox.Location = new System.Drawing.Point(8, 37);
+            this.EnumsListBox.Location = new System.Drawing.Point(8, 40);
             this.EnumsListBox.Name = "EnumsListBox";
             this.EnumsListBox.Size = new System.Drawing.Size(150, 225);
             this.EnumsListBox.TabIndex = 0;
@@ -115,7 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(345, 31);
+            this.label1.Location = new System.Drawing.Point(350, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 5;
@@ -124,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(175, 21);
+            this.label3.Location = new System.Drawing.Point(180, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 8;
@@ -132,7 +132,7 @@
             // 
             // IntBox
             // 
-            this.IntBox.Location = new System.Drawing.Point(348, 47);
+            this.IntBox.Location = new System.Drawing.Point(350, 40);
             this.IntBox.Name = "IntBox";
             this.IntBox.Size = new System.Drawing.Size(100, 20);
             this.IntBox.TabIndex = 6;
@@ -140,7 +140,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 21);
+            this.label2.Location = new System.Drawing.Point(8, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 13);
             this.label2.TabIndex = 7;
@@ -152,9 +152,9 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.Gobutton);
             this.groupBox1.Controls.Add(this.SeasonscomboBox);
-            this.groupBox1.Location = new System.Drawing.Point(350, 314);
+            this.groupBox1.Location = new System.Drawing.Point(350, 315);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(346, 97);
+            this.groupBox1.Size = new System.Drawing.Size(320, 100);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Weekday Parsing";
@@ -200,9 +200,9 @@
             this.Weekday.Controls.Add(this.WeekTextbox);
             this.Weekday.Controls.Add(this.ParseInput);
             this.Weekday.Controls.Add(this.OutLabelWeekday);
-            this.Weekday.Location = new System.Drawing.Point(11, 314);
+            this.Weekday.Location = new System.Drawing.Point(8, 315);
             this.Weekday.Name = "Weekday";
-            this.Weekday.Size = new System.Drawing.Size(319, 97);
+            this.Weekday.Size = new System.Drawing.Size(320, 100);
             this.Weekday.TabIndex = 15;
             this.Weekday.TabStop = false;
             this.Weekday.Text = "Weekday Parsing";
