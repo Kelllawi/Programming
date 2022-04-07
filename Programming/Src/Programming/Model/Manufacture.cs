@@ -1,6 +1,6 @@
 ﻿namespace Programming.Model
 {
-    public enum Manufactures
+    public enum Manufacture
     {
         Samsung,
         Apple,

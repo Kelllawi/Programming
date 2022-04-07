@@ -2,11 +2,11 @@
 {
     public enum Enums
     {
-        Color,
+        Colors,
         EducationForm,
         Genre,
-        Manufactures,
-        Seasons,
+        Manufacture,
+        Season,
         Weekday
     }
 }
