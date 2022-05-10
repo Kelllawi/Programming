@@ -10,9 +10,9 @@ namespace Programming.View
     {
         private const int ElementsCount = 5;
 
-        private Color ErrorColor = Color.Pink;
+        private readonly Color ErrorColor = Color.Pink;
 
-        private Color CorrectColor = Color.White;
+        private readonly Color CorrectColor = Color.White;
 
         private Rectangle[] _rectangles;
 
@@ -329,6 +329,11 @@ namespace Programming.View
         private void RectanglesGroupBox_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddRectangleButton_MouseMove(object sender, MouseEventArgs e)
+        {
+            AddRectangleButton.Image = Properties.Resources.rectagles_add_24x24;
         }
     }
 }
