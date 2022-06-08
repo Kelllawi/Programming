@@ -333,7 +333,7 @@ namespace Programming.View
 
         private void AddRectangleButton_MouseMove(object sender, MouseEventArgs e)
         {
-            AddRectangleButton.Image = Properties.Resources.rectagles_add_24x24;
+            AddRectangleButton.Image = Properties.Resources.rectangle_edit_24x24.png;
         }
     }
 }
