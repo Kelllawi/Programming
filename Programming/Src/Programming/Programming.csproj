@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -125,8 +126,14 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Content Include="Resources\rectangle_add_24x24.png" />
+    <Content Include="Resources\rectangle_add_24x24_uncolor.png" />
+    <Content Include="Resources\rectangle_edit_24x24.png" />
+    <Content Include="Resources\rectangle_edit_24x24_uncolor.png" />
+    <Content Include="Resources\rectangle_remove_24x24.png" />
+    <Content Include="Resources\rectangle_remove_24x24_uncolor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
