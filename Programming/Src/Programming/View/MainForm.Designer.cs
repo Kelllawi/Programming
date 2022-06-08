@@ -77,10 +77,7 @@
             this.LengthRectangleLabel = new System.Windows.Forms.Label();
             this.RectangleListBox = new System.Windows.Forms.ListBox();
             this.Reactagles = new System.Windows.Forms.TabPage();
-            this.CanvaPanel = new System.Windows.Forms.Panel();
-            this.AddingRectaglesListBox = new System.Windows.Forms.ListBox();
-            this.Rectagleslabel = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.AddRectangleButton = new System.Windows.Forms.Button();
             this.HeightRectangleTextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -92,7 +89,11 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.AddRectangleButton = new System.Windows.Forms.Button();
+            this.Rectagleslabel = new System.Windows.Forms.Label();
+            this.AddingRectaglesListBox = new System.Windows.Forms.ListBox();
+            this.CanvaPanel = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.RemoveRectangleButton = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.EnumerationTabPage.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
@@ -570,6 +571,7 @@
             // 
             // Reactagles
             // 
+            this.Reactagles.Controls.Add(this.RemoveRectangleButton);
             this.Reactagles.Controls.Add(this.AddRectangleButton);
             this.Reactagles.Controls.Add(this.HeightRectangleTextBox);
             this.Reactagles.Controls.Add(this.label13);
@@ -594,38 +596,18 @@
             this.Reactagles.Text = "Rectangles";
             this.Reactagles.UseVisualStyleBackColor = true;
             // 
-            // CanvaPanel
+            // AddRectangleButton
             // 
-            this.CanvaPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CanvaPanel.Location = new System.Drawing.Point(279, 3);
-            this.CanvaPanel.Name = "CanvaPanel";
-            this.CanvaPanel.Size = new System.Drawing.Size(444, 376);
-            this.CanvaPanel.TabIndex = 0;
-            // 
-            // AddingRectaglesListBox
-            // 
-            this.AddingRectaglesListBox.FormattingEnabled = true;
-            this.AddingRectaglesListBox.Location = new System.Drawing.Point(8, 18);
-            this.AddingRectaglesListBox.Name = "AddingRectaglesListBox";
-            this.AddingRectaglesListBox.Size = new System.Drawing.Size(265, 121);
-            this.AddingRectaglesListBox.TabIndex = 1;
-            // 
-            // Rectagleslabel
-            // 
-            this.Rectagleslabel.AutoSize = true;
-            this.Rectagleslabel.Location = new System.Drawing.Point(8, 2);
-            this.Rectagleslabel.Name = "Rectagleslabel";
-            this.Rectagleslabel.Size = new System.Drawing.Size(58, 13);
-            this.Rectagleslabel.TabIndex = 2;
-            this.Rectagleslabel.Text = "Rectagles:";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Location = new System.Drawing.Point(3, 3);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(720, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
+            this.AddRectangleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddRectangleButton.ForeColor = System.Drawing.Color.White;
+            this.AddRectangleButton.Image = ((System.Drawing.Image)(resources.GetObject("AddRectangleButton.Image")));
+            this.AddRectangleButton.Location = new System.Drawing.Point(28, 145);
+            this.AddRectangleButton.Name = "AddRectangleButton";
+            this.AddRectangleButton.Size = new System.Drawing.Size(45, 32);
+            this.AddRectangleButton.TabIndex = 26;
+            this.AddRectangleButton.UseVisualStyleBackColor = true;
+            this.AddRectangleButton.MouseLeave += new System.EventHandler(this.AddRectangleButton_MouseLeave);
+            this.AddRectangleButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddRectangleButton_MouseMove);
             // 
             // HeightRectangleTextBox
             // 
@@ -729,18 +711,51 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Selected Rectangle:";
             // 
-            // AddRectangleButton
+            // Rectagleslabel
             // 
-            this.AddRectangleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddRectangleButton.ForeColor = System.Drawing.Color.White;
-            this.AddRectangleButton.Image = ((System.Drawing.Image)(resources.GetObject("AddRectangleButton.Image")));
-            this.AddRectangleButton.Location = new System.Drawing.Point(28, 145);
-            this.AddRectangleButton.Name = "AddRectangleButton";
-            this.AddRectangleButton.Size = new System.Drawing.Size(45, 32);
-            this.AddRectangleButton.TabIndex = 26;
-            this.AddRectangleButton.Text = "button1";
-            this.AddRectangleButton.UseVisualStyleBackColor = true;
-            this.AddRectangleButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddRectangleButton_MouseMove);
+            this.Rectagleslabel.AutoSize = true;
+            this.Rectagleslabel.Location = new System.Drawing.Point(8, 2);
+            this.Rectagleslabel.Name = "Rectagleslabel";
+            this.Rectagleslabel.Size = new System.Drawing.Size(58, 13);
+            this.Rectagleslabel.TabIndex = 2;
+            this.Rectagleslabel.Text = "Rectagles:";
+            // 
+            // AddingRectaglesListBox
+            // 
+            this.AddingRectaglesListBox.FormattingEnabled = true;
+            this.AddingRectaglesListBox.Location = new System.Drawing.Point(8, 18);
+            this.AddingRectaglesListBox.Name = "AddingRectaglesListBox";
+            this.AddingRectaglesListBox.Size = new System.Drawing.Size(265, 121);
+            this.AddingRectaglesListBox.TabIndex = 1;
+            // 
+            // CanvaPanel
+            // 
+            this.CanvaPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CanvaPanel.Location = new System.Drawing.Point(279, 3);
+            this.CanvaPanel.Name = "CanvaPanel";
+            this.CanvaPanel.Size = new System.Drawing.Size(444, 376);
+            this.CanvaPanel.TabIndex = 0;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(3, 3);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(720, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // RemoveRectangleButton
+            // 
+            this.RemoveRectangleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveRectangleButton.ForeColor = System.Drawing.Color.White;
+            this.RemoveRectangleButton.Image = global::Programming.Properties.Resources.rectangle_remove_24x24_uncolor;
+            this.RemoveRectangleButton.Location = new System.Drawing.Point(171, 145);
+            this.RemoveRectangleButton.Name = "RemoveRectangleButton";
+            this.RemoveRectangleButton.Size = new System.Drawing.Size(45, 32);
+            this.RemoveRectangleButton.TabIndex = 27;
+            this.RemoveRectangleButton.UseVisualStyleBackColor = true;
+            this.RemoveRectangleButton.MouseLeave += new System.EventHandler(this.RemoveRectangleButton_MouseLeave);
+            this.RemoveRectangleButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RemoveRectangleButton_MouseMove);
             // 
             // MainForm
             // 
@@ -843,6 +858,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button RemoveRectangleButton;
     }
 }
 

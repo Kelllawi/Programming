@@ -128,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\rectangle_add_24x24.png" />
+    <None Include="Resources\rectangle_remove_24x24_uncolor1.png" />
+    <None Include="Resources\rectangle_remove_24x241.png" />
+    <None Include="Resources\rectangle_edit_24x24_uncolor1.png" />
+    <None Include="Resources\rectangle_edit_24x241.png" />
+    <None Include="Resources\rectangle_add_24x24_uncolor1.png" />
+    <None Include="Resources\rectangle_add_24x241.png" />
     <Content Include="Resources\rectangle_add_24x24_uncolor.png" />
     <Content Include="Resources\rectangle_edit_24x24.png" />
     <Content Include="Resources\rectangle_edit_24x24_uncolor.png" />
