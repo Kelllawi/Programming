@@ -62,23 +62,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Geometryy\CollisionManager.cs" />
+    <Compile Include="Model\Geometryy\Point2D.cs" />
+    <Compile Include="Model\Geometryy\Rectangle.cs" />
+    <Compile Include="Model\Geometryy\RectangleFactory.cs" />
+    <Compile Include="Model\Geometryy\Ring.cs" />
     <Compile Include="Model\Subject.cs" />
-    <Compile Include="Model\Point2D.cs" />
     <Compile Include="Model\Validator.cs" />
-    <Compile Include="Model\Ring.cs" />
     <Compile Include="Model\Time.cs" />
     <Compile Include="Model\Song.cs" />
     <Compile Include="Model\Route.cs" />
-    <Compile Include="Model\Rectangle.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\Contact.cs" />
-    <Compile Include="Model\CollisionManager.cs" />
     <Compile Include="Model\Colors.cs" />
     <Compile Include="Model\EducationForm.cs" />
     <Compile Include="Model\Season.cs" />
     <Compile Include="Model\Manufacture.cs" />
     <Compile Include="Model\Weekday.cs" />
     <Compile Include="Model\Genre.cs" />
+    <Compile Include="View\Control\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Control\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Enums.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
@@ -88,6 +95,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\Control\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
