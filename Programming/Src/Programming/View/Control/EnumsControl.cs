@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Programming.View.Control
 {
-    public partial class UserControl1 : UserControl
+    public partial class EnumsControl : UserControl
     {
-        public UserControl1()
+        public EnumsControl()
         {
             InitializeComponent();
         }
