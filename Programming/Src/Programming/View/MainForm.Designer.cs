@@ -40,13 +40,6 @@
             this.ParseWeekdayButton = new System.Windows.Forms.Button();
             this.WeekdayTextBox = new System.Windows.Forms.TextBox();
             this.TryParsingLabel = new System.Windows.Forms.Label();
-            this.EnumGroupBox = new System.Windows.Forms.GroupBox();
-            this.ChooseEnumLabel = new System.Windows.Forms.Label();
-            this.IntValueLabel = new System.Windows.Forms.Label();
-            this.EnumListBox = new System.Windows.Forms.ListBox();
-            this.IntValueTextBox = new System.Windows.Forms.TextBox();
-            this.ValueListBox = new System.Windows.Forms.ListBox();
-            this.ChooseValueLabel = new System.Windows.Forms.Label();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
             this.MoviesGroupBox = new System.Windows.Forms.GroupBox();
             this.GenreMovieTextBox = new System.Windows.Forms.TextBox();
@@ -94,15 +87,22 @@
             this.AddingRectaglesListBox = new System.Windows.Forms.ListBox();
             this.CanvaPanel = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ChooseValueLabel = new System.Windows.Forms.Label();
+            this.ValueListBox = new System.Windows.Forms.ListBox();
+            this.IntValueTextBox = new System.Windows.Forms.TextBox();
+            this.EnumListBox = new System.Windows.Forms.ListBox();
+            this.IntValueLabel = new System.Windows.Forms.Label();
+            this.ChooseEnumLabel = new System.Windows.Forms.Label();
+            this.EnumGroupBox = new System.Windows.Forms.GroupBox();
             this.MainTabControl.SuspendLayout();
             this.EnumerationTabPage.SuspendLayout();
             this.SeasonHandleGroupBox.SuspendLayout();
             this.WeekdayGroupBox.SuspendLayout();
-            this.EnumGroupBox.SuspendLayout();
             this.ClassesTabPage.SuspendLayout();
             this.MoviesGroupBox.SuspendLayout();
             this.RectanglesGroupBox.SuspendLayout();
             this.Reactagles.SuspendLayout();
+            this.EnumGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -218,75 +218,6 @@
             this.TryParsingLabel.Size = new System.Drawing.Size(115, 13);
             this.TryParsingLabel.TabIndex = 6;
             this.TryParsingLabel.Text = "Type value for parsing:";
-            // 
-            // EnumGroupBox
-            // 
-            this.EnumGroupBox.Controls.Add(this.ChooseEnumLabel);
-            this.EnumGroupBox.Controls.Add(this.IntValueLabel);
-            this.EnumGroupBox.Controls.Add(this.EnumListBox);
-            this.EnumGroupBox.Controls.Add(this.IntValueTextBox);
-            this.EnumGroupBox.Controls.Add(this.ValueListBox);
-            this.EnumGroupBox.Controls.Add(this.ChooseValueLabel);
-            this.EnumGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.EnumGroupBox.Location = new System.Drawing.Point(3, 3);
-            this.EnumGroupBox.Name = "EnumGroupBox";
-            this.EnumGroupBox.Size = new System.Drawing.Size(720, 252);
-            this.EnumGroupBox.TabIndex = 6;
-            this.EnumGroupBox.TabStop = false;
-            this.EnumGroupBox.Text = "Enumeration";
-            // 
-            // ChooseEnumLabel
-            // 
-            this.ChooseEnumLabel.AutoSize = true;
-            this.ChooseEnumLabel.Location = new System.Drawing.Point(3, 16);
-            this.ChooseEnumLabel.Name = "ChooseEnumLabel";
-            this.ChooseEnumLabel.Size = new System.Drawing.Size(107, 13);
-            this.ChooseEnumLabel.TabIndex = 1;
-            this.ChooseEnumLabel.Text = "Choose enumeration:";
-            // 
-            // IntValueLabel
-            // 
-            this.IntValueLabel.AutoSize = true;
-            this.IntValueLabel.Location = new System.Drawing.Point(315, 16);
-            this.IntValueLabel.Name = "IntValueLabel";
-            this.IntValueLabel.Size = new System.Drawing.Size(51, 13);
-            this.IntValueLabel.TabIndex = 5;
-            this.IntValueLabel.Text = "Int value:";
-            // 
-            // EnumListBox
-            // 
-            this.EnumListBox.FormattingEnabled = true;
-            this.EnumListBox.Location = new System.Drawing.Point(6, 32);
-            this.EnumListBox.Name = "EnumListBox";
-            this.EnumListBox.Size = new System.Drawing.Size(150, 199);
-            this.EnumListBox.TabIndex = 0;
-            this.EnumListBox.SelectedIndexChanged += new System.EventHandler(this.EnumListBox_SelectedIndexChanged);
-            // 
-            // IntValueTextBox
-            // 
-            this.IntValueTextBox.Location = new System.Drawing.Point(318, 32);
-            this.IntValueTextBox.Name = "IntValueTextBox";
-            this.IntValueTextBox.ReadOnly = true;
-            this.IntValueTextBox.Size = new System.Drawing.Size(185, 20);
-            this.IntValueTextBox.TabIndex = 4;
-            // 
-            // ValueListBox
-            // 
-            this.ValueListBox.FormattingEnabled = true;
-            this.ValueListBox.Location = new System.Drawing.Point(162, 32);
-            this.ValueListBox.Name = "ValueListBox";
-            this.ValueListBox.Size = new System.Drawing.Size(150, 199);
-            this.ValueListBox.TabIndex = 2;
-            this.ValueListBox.SelectedIndexChanged += new System.EventHandler(this.ValueListBox_SelectedIndexChanged);
-            // 
-            // ChooseValueLabel
-            // 
-            this.ChooseValueLabel.AutoSize = true;
-            this.ChooseValueLabel.Location = new System.Drawing.Point(159, 16);
-            this.ChooseValueLabel.Name = "ChooseValueLabel";
-            this.ChooseValueLabel.Size = new System.Drawing.Size(75, 13);
-            this.ChooseValueLabel.TabIndex = 3;
-            this.ChooseValueLabel.Text = "Choose value:";
             // 
             // ClassesTabPage
             // 
@@ -757,6 +688,75 @@
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // ChooseValueLabel
+            // 
+            this.ChooseValueLabel.AutoSize = true;
+            this.ChooseValueLabel.Location = new System.Drawing.Point(159, 16);
+            this.ChooseValueLabel.Name = "ChooseValueLabel";
+            this.ChooseValueLabel.Size = new System.Drawing.Size(75, 13);
+            this.ChooseValueLabel.TabIndex = 3;
+            this.ChooseValueLabel.Text = "Choose value:";
+            // 
+            // ValueListBox
+            // 
+            this.ValueListBox.FormattingEnabled = true;
+            this.ValueListBox.Location = new System.Drawing.Point(162, 32);
+            this.ValueListBox.Name = "ValueListBox";
+            this.ValueListBox.Size = new System.Drawing.Size(150, 199);
+            this.ValueListBox.TabIndex = 2;
+            this.ValueListBox.SelectedIndexChanged += new System.EventHandler(this.ValueListBox_SelectedIndexChanged);
+            // 
+            // IntValueTextBox
+            // 
+            this.IntValueTextBox.Location = new System.Drawing.Point(318, 32);
+            this.IntValueTextBox.Name = "IntValueTextBox";
+            this.IntValueTextBox.ReadOnly = true;
+            this.IntValueTextBox.Size = new System.Drawing.Size(185, 20);
+            this.IntValueTextBox.TabIndex = 4;
+            // 
+            // EnumListBox
+            // 
+            this.EnumListBox.FormattingEnabled = true;
+            this.EnumListBox.Location = new System.Drawing.Point(6, 32);
+            this.EnumListBox.Name = "EnumListBox";
+            this.EnumListBox.Size = new System.Drawing.Size(150, 199);
+            this.EnumListBox.TabIndex = 0;
+            this.EnumListBox.SelectedIndexChanged += new System.EventHandler(this.EnumListBox_SelectedIndexChanged);
+            // 
+            // IntValueLabel
+            // 
+            this.IntValueLabel.AutoSize = true;
+            this.IntValueLabel.Location = new System.Drawing.Point(315, 16);
+            this.IntValueLabel.Name = "IntValueLabel";
+            this.IntValueLabel.Size = new System.Drawing.Size(51, 13);
+            this.IntValueLabel.TabIndex = 5;
+            this.IntValueLabel.Text = "Int value:";
+            // 
+            // ChooseEnumLabel
+            // 
+            this.ChooseEnumLabel.AutoSize = true;
+            this.ChooseEnumLabel.Location = new System.Drawing.Point(3, 16);
+            this.ChooseEnumLabel.Name = "ChooseEnumLabel";
+            this.ChooseEnumLabel.Size = new System.Drawing.Size(107, 13);
+            this.ChooseEnumLabel.TabIndex = 1;
+            this.ChooseEnumLabel.Text = "Choose enumeration:";
+            // 
+            // EnumGroupBox
+            // 
+            this.EnumGroupBox.Controls.Add(this.ChooseEnumLabel);
+            this.EnumGroupBox.Controls.Add(this.IntValueLabel);
+            this.EnumGroupBox.Controls.Add(this.EnumListBox);
+            this.EnumGroupBox.Controls.Add(this.IntValueTextBox);
+            this.EnumGroupBox.Controls.Add(this.ValueListBox);
+            this.EnumGroupBox.Controls.Add(this.ChooseValueLabel);
+            this.EnumGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EnumGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.EnumGroupBox.Name = "EnumGroupBox";
+            this.EnumGroupBox.Size = new System.Drawing.Size(720, 252);
+            this.EnumGroupBox.TabIndex = 6;
+            this.EnumGroupBox.TabStop = false;
+            this.EnumGroupBox.Text = "Enumeration";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -773,8 +773,6 @@
             this.SeasonHandleGroupBox.PerformLayout();
             this.WeekdayGroupBox.ResumeLayout(false);
             this.WeekdayGroupBox.PerformLayout();
-            this.EnumGroupBox.ResumeLayout(false);
-            this.EnumGroupBox.PerformLayout();
             this.ClassesTabPage.ResumeLayout(false);
             this.MoviesGroupBox.ResumeLayout(false);
             this.MoviesGroupBox.PerformLayout();
@@ -782,6 +780,8 @@
             this.RectanglesGroupBox.PerformLayout();
             this.Reactagles.ResumeLayout(false);
             this.Reactagles.PerformLayout();
+            this.EnumGroupBox.ResumeLayout(false);
+            this.EnumGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -800,15 +800,9 @@
 
         #endregion
 
+
         private System.Windows.Forms.TabControl MainTabControl;
         private System.Windows.Forms.TabPage EnumerationTabPage;
-        private System.Windows.Forms.Label IntValueLabel;
-        private System.Windows.Forms.TextBox IntValueTextBox;
-        private System.Windows.Forms.Label ChooseValueLabel;
-        private System.Windows.Forms.ListBox ValueListBox;
-        private System.Windows.Forms.Label ChooseEnumLabel;
-        private System.Windows.Forms.ListBox EnumListBox;
-        private System.Windows.Forms.GroupBox EnumGroupBox;
         private System.Windows.Forms.GroupBox WeekdayGroupBox;
         private System.Windows.Forms.Label OutputWeekdayLabel;
         private System.Windows.Forms.Button ParseWeekdayButton;
@@ -859,6 +853,13 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button RemoveRectangleButton;
+        private System.Windows.Forms.GroupBox EnumGroupBox;
+        private System.Windows.Forms.Label ChooseEnumLabel;
+        private System.Windows.Forms.Label IntValueLabel;
+        private System.Windows.Forms.ListBox EnumListBox;
+        private System.Windows.Forms.TextBox IntValueTextBox;
+        private System.Windows.Forms.ListBox ValueListBox;
+        private System.Windows.Forms.Label ChooseValueLabel;
     }
 }
 

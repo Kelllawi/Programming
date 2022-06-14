@@ -61,6 +61,7 @@
             this.ValueListBox.Name = "ValueListBox";
             this.ValueListBox.Size = new System.Drawing.Size(150, 199);
             this.ValueListBox.TabIndex = 4;
+            this.ValueListBox.SelectedIndexChanged += new System.EventHandler(this.ValueListBox_SelectedIndexChanged);
             // 
             // ChooseValueLabel
             // 

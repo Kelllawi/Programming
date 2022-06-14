@@ -56,5 +56,11 @@ namespace Programming.View.Control
             }
 
         }
+
+        private void ValueListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var item = ValueListBox.SelectedItem;
+            IntValueTextBox.Text = ((int)item).ToString();
+        }
     }
 }

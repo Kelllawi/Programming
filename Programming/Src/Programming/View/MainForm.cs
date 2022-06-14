@@ -3,8 +3,9 @@ using System.Drawing;
 using System.Windows.Forms;
 using Programming.Model.Enums;
 using Programming.Model;
-using Rectangle = Programming.Model.Rectangle;
+using Rectangle = Programming.Model.Geometryy.Rectangle;
 using Programming.View.Control;
+using Programming.Model.Geometryy;
 
 namespace Programming.View
 {
@@ -30,14 +31,7 @@ namespace Programming.View
         {
             InitializeComponent();
             Array allEnums = Enum.GetValues(typeof(Enums));
-            foreach (Enums value in allEnums)
-            {
-                EnumListBox.Items.Add(value);
-            }
-
-            _random = new Random();
-
-            EnumListBox.SelectedIndex = 0;
+       
 
             Array seasonValues = Enum.GetValues(typeof(Season));
             foreach (Season value in seasonValues)
@@ -117,45 +111,9 @@ namespace Programming.View
             return maxRatingIndex;
         }
 
-        private void EnumListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ValueListBox.Items.Clear();
-            Array enumValues;
-            switch (EnumListBox.SelectedItem)
-            {
-                case Enums.Colors:
-                    enumValues = Enum.GetValues(typeof(Colors));
-                    break;
-                case Enums.Weekday:
-                    enumValues = Enum.GetValues(typeof(Weekday));
-                    break;
-                case Enums.Season:
-                    enumValues = Enum.GetValues(typeof(Season));
-                    break;
-                case Enums.Manufacture:
-                    enumValues = Enum.GetValues(typeof(Manufacture));
-                    break;
-                case Enums.Genre:
-                    enumValues = Enum.GetValues(typeof(Genre));
-                    break;
-                case Enums.EducationForm:
-                    enumValues = Enum.GetValues(typeof(EducationForm));
-                    break;
-                default:
-                    throw new NotImplementedException();
-            }
+       
 
-            foreach (var value in enumValues)
-            {
-                ValueListBox.Items.Add(value);
-            }
-        }
-
-        private void ValueListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            IntValueTextBox.Text = ((int)(ValueListBox.SelectedItem)).ToString();
-        }
-
+       
         private void ParseWeekdayButton_Click(object sender, EventArgs e)
         {
             string textWeekdayTextBox = WeekdayTextBox.Text;
@@ -351,6 +309,16 @@ namespace Programming.View
         private void RemoveRectangleButton_MouseLeave(object sender, EventArgs e)
         {
             RemoveRectangleButton.Image= Properties.Resources.rectangle_remove_24x24_uncolor;
+        }
+
+        private void ValueListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnumListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
