@@ -87,6 +87,12 @@
     <Compile Include="View\Control\EnumsControl.Designer.cs">
       <DependentUpon>EnumsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Control\MoviesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Control\MoviesControl.Designer.cs">
+      <DependentUpon>MoviesControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Control\Season HandleConrol.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\Control\EnumsControl.resx">
       <DependentUpon>EnumsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Control\MoviesControl.resx">
+      <DependentUpon>MoviesControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Control\Season HandleConrol.resx">
       <DependentUpon>Season HandleConrol.cs</DependentUpon>
