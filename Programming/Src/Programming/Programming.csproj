@@ -80,11 +80,11 @@
     <Compile Include="Model\Enums\Manufacture.cs" />
     <Compile Include="Model\Enums\Weekday.cs" />
     <Compile Include="Model\Enums\Genre.cs" />
-    <Compile Include="View\Control\EnumsControl.cs">
+    <Compile Include="View\Control\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Control\EnumsControl.Designer.cs">
-      <DependentUpon>EnumsControl.cs</DependentUpon>
+    <Compile Include="View\Control\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Enums.cs" />
     <Compile Include="View\MainForm.cs">
@@ -95,8 +95,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\Control\EnumsControl.resx">
-      <DependentUpon>EnumsControl.cs</DependentUpon>
+    <EmbeddedResource Include="View\Control\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

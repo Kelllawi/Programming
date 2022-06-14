@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Programming.Model.Enums;
 using Programming.Model;
 using Rectangle = Programming.Model.Rectangle;
-using Programming.Model.Enums;
+using Programming.View.Control;
 
 namespace Programming.View
 {
