@@ -100,7 +100,7 @@
             this.Controls.Add(this.EnumListBox);
             this.Controls.Add(this.ChooseEnumLabel);
             this.Name = "EnumerationsControl";
-            this.Size = new System.Drawing.Size(613, 346);
+            this.Size = new System.Drawing.Size(571, 294);
             this.ResumeLayout(false);
             this.PerformLayout();
 
