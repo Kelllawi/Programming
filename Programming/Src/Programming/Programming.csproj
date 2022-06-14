@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\AppColors.cs" />
     <Compile Include="Model\Geometryy\CollisionManager.cs" />
     <Compile Include="Model\Geometryy\Point2D.cs" />
     <Compile Include="Model\Geometryy\Rectangle.cs" />
@@ -92,6 +93,12 @@
     <Compile Include="View\Control\Season HandleConrol.Designer.cs">
       <DependentUpon>Season HandleConrol.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Control\RectangsControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Control\RectangsControll.Designer.cs">
+      <DependentUpon>RectangsControll.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Control\WeekdayParsingControll.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Control\Season HandleConrol.resx">
       <DependentUpon>Season HandleConrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Control\RectangsControll.resx">
+      <DependentUpon>RectangsControll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Control\WeekdayParsingControll.resx">
       <DependentUpon>WeekdayParsingControll.cs</DependentUpon>

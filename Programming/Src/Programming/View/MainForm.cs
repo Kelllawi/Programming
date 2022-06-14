@@ -17,9 +17,6 @@ namespace Programming.View
 
         private readonly Color CorrectColor = Color.White;
 
-        private Rectangle[] _rectangles;
-
-        private Rectangle _currentRectangle;
 
         private Movie[] _movies;
 
@@ -34,27 +31,11 @@ namespace Programming.View
        
 
             
-            CreateRectangles();
+           
             CreateMovies();
         }
 
-        private void CreateRectangles()
-        {
-            _rectangles = new Rectangle[ElementsCount];
-            var colors = Enum.GetValues(typeof(Colors));
-            for (int i = 0; i < ElementsCount; i++)
-            {
-                _currentRectangle = new Rectangle();
-                _currentRectangle.Width = _random.Next(1, 1001) / 10.0;
-                _currentRectangle.Length = _random.Next(1, 1001) / 10.0;
-                _currentRectangle.Color = colors.GetValue(_random.Next(0, colors.Length)).ToString();
-                _currentRectangle.Center = new Point2D(_random.Next(1, 100), _random.Next(1, 100));
-                _rectangles[i] = _currentRectangle;
-                RectangleListBox.Items.Add($"Rectangle {_currentRectangle.Id}");
-            }
-
-            RectangleListBox.SelectedIndex = 0;
-        }
+        
 
         private void CreateMovies()
         {
@@ -107,66 +88,7 @@ namespace Programming.View
             return maxRatingIndex;
         }
 
-   
-       
-
-        private void RectangleListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int selectedIndexRectangle = RectangleListBox.SelectedIndex;
-            _currentRectangle = _rectangles[selectedIndexRectangle];
-            LengthRectangleTextBox.Text = _currentRectangle.Length.ToString();
-            WidthRectangleTextBox.Text = _currentRectangle.Width.ToString();
-            ColorRectangleTextBox.Text = _currentRectangle.Color;
-            XRectangleTextBox.Text = _currentRectangle.Center.X.ToString();
-            YRectangleTextBox.Text = _currentRectangle.Center.Y.ToString();
-            IdRectangleTextBox.Text = _currentRectangle.Id.ToString();
-        }
-
-        private void LengthRectangleTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                string currentLengthLength = LengthRectangleTextBox.Text;
-                double lengthRectangleValue = double.Parse(currentLengthLength);
-                _currentRectangle.Length = lengthRectangleValue;
-            }
-            catch
-            {
-                LengthRectangleTextBox.BackColor = ErrorColor;
-                return;
-            }
-
-            LengthRectangleTextBox.BackColor = CorrectColor;
-        }
-
-        private void WidthRectangleTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                string currentWidthRectangle = WidthRectangleTextBox.Text;
-                double widthRectangleValue = double.Parse(currentWidthRectangle);
-                _currentRectangle.Width = widthRectangleValue;
-            }
-            catch
-            {
-                WidthRectangleTextBox.BackColor = ErrorColor;
-                return;
-            }
-
-            WidthRectangleTextBox.BackColor = CorrectColor;
-        }
-
-        private void ColorRectangleTextBox_TextChanged(object sender, EventArgs e)
-        {
-            string colorRectangleValue = ColorRectangleTextBox.Text;
-            _currentRectangle.Color = colorRectangleValue;
-        }
-
-        private void FindRectangleButton_Click(object sender, EventArgs e)
-        {
-            int findMaxWidthIndex = FindRectangleWithMaxWidth(_rectangles);
-            RectangleListBox.SelectedIndex = findMaxWidthIndex;
-        }
+  
 
         private void MovieListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
