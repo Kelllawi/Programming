@@ -86,11 +86,11 @@
     <Compile Include="View\Control\EnumsControl.Designer.cs">
       <DependentUpon>EnumsControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Control\UserControl1.cs">
+    <Compile Include="View\Control\WeekdayParsingControll.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Control\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="View\Control\WeekdayParsingControll.Designer.cs">
+      <DependentUpon>WeekdayParsingControll.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Enums.cs" />
     <Compile Include="View\MainForm.cs">
@@ -104,8 +104,8 @@
     <EmbeddedResource Include="View\Control\EnumsControl.resx">
       <DependentUpon>EnumsControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Control\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="View\Control\WeekdayParsingControll.resx">
+      <DependentUpon>WeekdayParsingControll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
