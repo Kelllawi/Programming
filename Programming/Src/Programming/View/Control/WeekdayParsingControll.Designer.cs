@@ -32,11 +32,13 @@
             this.ParseTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.OutLabel = new System.Windows.Forms.Label();
+            this.WeekDayParsing = new System.Windows.Forms.GroupBox();
+            this.WeekDayParsing.SuspendLayout();
             this.SuspendLayout();
             // 
             // ParseButton
             // 
-            this.ParseButton.Location = new System.Drawing.Point(178, 15);
+            this.ParseButton.Location = new System.Drawing.Point(179, 30);
             this.ParseButton.Name = "ParseButton";
             this.ParseButton.Size = new System.Drawing.Size(70, 20);
             this.ParseButton.TabIndex = 5;
@@ -47,7 +49,7 @@
             // ParseTextBox
             // 
             this.ParseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ParseTextBox.Location = new System.Drawing.Point(5, 16);
+            this.ParseTextBox.Location = new System.Drawing.Point(6, 31);
             this.ParseTextBox.Name = "ParseTextBox";
             this.ParseTextBox.Size = new System.Drawing.Size(167, 20);
             this.ParseTextBox.TabIndex = 4;
@@ -55,7 +57,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Location = new System.Drawing.Point(4, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 13);
             this.label4.TabIndex = 3;
@@ -64,25 +66,36 @@
             // OutLabel
             // 
             this.OutLabel.AutoSize = true;
-            this.OutLabel.Location = new System.Drawing.Point(3, 48);
+            this.OutLabel.Location = new System.Drawing.Point(4, 63);
             this.OutLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OutLabel.Name = "OutLabel";
             this.OutLabel.Size = new System.Drawing.Size(0, 13);
             this.OutLabel.TabIndex = 6;
             // 
+            // WeekDayParsing
+            // 
+            this.WeekDayParsing.Controls.Add(this.ParseTextBox);
+            this.WeekDayParsing.Controls.Add(this.OutLabel);
+            this.WeekDayParsing.Controls.Add(this.label4);
+            this.WeekDayParsing.Controls.Add(this.ParseButton);
+            this.WeekDayParsing.Location = new System.Drawing.Point(3, 3);
+            this.WeekDayParsing.Name = "WeekDayParsing";
+            this.WeekDayParsing.Size = new System.Drawing.Size(316, 100);
+            this.WeekDayParsing.TabIndex = 7;
+            this.WeekDayParsing.TabStop = false;
+            this.WeekDayParsing.Text = "WeekDayParsing";
+            // 
             // WeekdayParsingControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.OutLabel);
-            this.Controls.Add(this.ParseButton);
-            this.Controls.Add(this.ParseTextBox);
-            this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.WeekDayParsing);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WeekdayParsingControl";
-            this.Size = new System.Drawing.Size(623, 266);
+            this.Size = new System.Drawing.Size(371, 117);
+            this.WeekDayParsing.ResumeLayout(false);
+            this.WeekDayParsing.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -92,5 +105,6 @@
         private System.Windows.Forms.TextBox ParseTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label OutLabel;
+        private System.Windows.Forms.GroupBox WeekDayParsing;
     }
 }

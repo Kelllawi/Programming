@@ -33,11 +33,7 @@ namespace Programming.View
             Array allEnums = Enum.GetValues(typeof(Enums));
        
 
-            Array seasonValues = Enum.GetValues(typeof(Season));
-            foreach (Season value in seasonValues)
-            {
-                SeasonNamesComboBox.Items.Add(value);
-            }
+            
             CreateRectangles();
             CreateMovies();
         }
@@ -111,43 +107,8 @@ namespace Programming.View
             return maxRatingIndex;
         }
 
+   
        
-
-       
-        private void ParseWeekdayButton_Click(object sender, EventArgs e)
-        {
-            string textWeekdayTextBox = WeekdayTextBox.Text;
-            Weekday value;
-            if (Enum.TryParse(textWeekdayTextBox, out value))
-            {
-                OutputWeekdayLabel.Text = $"Это день недели ({value} - {(int)value})";
-            }
-            else
-            {
-                OutputWeekdayLabel.Text = "Нет такого дня недели";
-            }
-        }
-
-        private void GoButton_Click(object sender, EventArgs e)
-        {
-            switch (SeasonNamesComboBox.SelectedItem)
-            {
-                case Season.Winter:
-                    this.BackColor = DefaultBackColor;
-                    MessageBox.Show("Бррр! Холодно!");
-                    break;
-                case Season.Summer:
-                    this.BackColor = DefaultBackColor;
-                    MessageBox.Show("Ура! Солнце!");
-                    break;
-                case Season.Spring:
-                    this.BackColor = ColorTranslator.FromHtml("#559c45");
-                    break;
-                case Season.Autumn:
-                    this.BackColor = ColorTranslator.FromHtml("#e29c45");
-                    break;
-            }
-        }
 
         private void RectangleListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
