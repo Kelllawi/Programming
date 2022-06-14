@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Programming.Model;
 using Rectangle = Programming.Model.Rectangle;
+using Programming.Model.Enums;
 
 namespace Programming.View
 {

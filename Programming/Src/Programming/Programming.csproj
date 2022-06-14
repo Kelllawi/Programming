@@ -74,12 +74,12 @@
     <Compile Include="Model\Route.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\Contact.cs" />
-    <Compile Include="Model\Colors.cs" />
-    <Compile Include="Model\EducationForm.cs" />
-    <Compile Include="Model\Season.cs" />
-    <Compile Include="Model\Manufacture.cs" />
-    <Compile Include="Model\Weekday.cs" />
-    <Compile Include="Model\Genre.cs" />
+    <Compile Include="Model\Enums\Colors.cs" />
+    <Compile Include="Model\Enums\EducationForm.cs" />
+    <Compile Include="Model\Enums\Season.cs" />
+    <Compile Include="Model\Enums\Manufacture.cs" />
+    <Compile Include="Model\Enums\Weekday.cs" />
+    <Compile Include="Model\Enums\Genre.cs" />
     <Compile Include="View\Control\EnumsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
