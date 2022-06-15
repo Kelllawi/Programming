@@ -68,6 +68,7 @@
             this.AddRectangleButton.Size = new System.Drawing.Size(51, 30);
             this.AddRectangleButton.TabIndex = 42;
             this.AddRectangleButton.UseVisualStyleBackColor = true;
+            this.AddRectangleButton.Click += new System.EventHandler(this.AddRectangleButton_Click);
             // 
             // HeightRectangleTextBox
             // 
@@ -187,13 +188,14 @@
             this.AddingRectaglesListBox.Name = "AddingRectaglesListBox";
             this.AddingRectaglesListBox.Size = new System.Drawing.Size(265, 95);
             this.AddingRectaglesListBox.TabIndex = 29;
+            this.AddingRectaglesListBox.SelectedIndexChanged += new System.EventHandler(this.AddingRectaglesListBox_SelectedIndexChanged);
             // 
             // CanvaPanel
             // 
             this.CanvaPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CanvaPanel.Location = new System.Drawing.Point(274, 22);
             this.CanvaPanel.Name = "CanvaPanel";
-            this.CanvaPanel.Size = new System.Drawing.Size(444, 359);
+            this.CanvaPanel.Size = new System.Drawing.Size(360, 275);
             this.CanvaPanel.TabIndex = 28;
             // 
             // RectangleCollisionControl
@@ -217,7 +219,7 @@
             this.Controls.Add(this.AddingRectaglesListBox);
             this.Controls.Add(this.CanvaPanel);
             this.Name = "RectangleCollisionControl";
-            this.Size = new System.Drawing.Size(746, 395);
+            this.Size = new System.Drawing.Size(655, 319);
             this.ResumeLayout(false);
             this.PerformLayout();
 
