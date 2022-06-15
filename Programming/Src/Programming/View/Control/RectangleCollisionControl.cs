@@ -39,6 +39,31 @@ namespace Programming.View.Control
             RemoveRectangleButton.Image = Properties.Resources.rectangle_remove_24x24_uncolor;
         }
 
+        private void UpdateRectangleInfo(Rectangle rectangle)
+        {
+            int index = AddingRectaglesListBox.FindString(rectangle.Id.ToString());
+            AddingRectaglesListBox.Items[index] = rectangle.GetRectangleInfo();
+        }
+
+        private void FindCollisions()
+        {
+            for (int n = 0; n < _rectangle.Count; n++)
+            {
+                CanvaPanel.Controls[n].BackColor = Colors.IsNotCollision;
+            }
+
+            for (int i = 0; i < _rectangle.Count; i++)
+            {
+                for (int j = i + 1; j < _rectangle.Count; j++)
+                {
+                    if (CollisionManager.IsCollision(_rectangle[i], _rectangle[j]))
+                    {
+                        CanvaPanel.Controls[i].BackColor = Colors.IsCollision;
+                        CanvaPanel.Controls[j].BackColor = Colors.IsCollision;
+                    }
+                }
+            }
+        }
 
 
         private void AddRectangleButton_Click(object sender, EventArgs e)
@@ -51,38 +76,148 @@ namespace Programming.View.Control
                 Width = newRectangle.Width;
                 Height = newRectangle.Height;
                 Location = new Point(newRectangle.Center.X, newRectangle.Center.Y);
-                BackColor = Colors.IsNotCollision;
+                
                 BorderStyle = BorderStyle.FixedSingle;
             }
 
             _rectanglePanels.Add(rectanglePanel);
             CanvaPanel.Controls.Add(rectanglePanel);
+
+            UpdateListBoexs();
         }
 
         private void AddingRectaglesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AddingRectaglesListBox.Items.Clear();
-             for (int i = 0; i < _rectangle.Count; i++)
-            {
-                AddingRectaglesListBox.Items.Add(_rectangle[i].GetRectangleInfo());
-            }
-            AddingRectaglesListBox.SelectedIndex = _rectangle.Count - 1;
+            if (AddingRectaglesListBox.SelectedIndex == -1) return;
+
+            int rectangleIndex = AddingRectaglesListBox.SelectedIndex;
+            _currentrectangle = _rectangle[rectangleIndex];
+            HeightTextBox.Text = _currentrectangle.Height.ToString();
+            WidthTextBox.Text = _currentrectangle.Width.ToString();
+            XTextBox.Text = _currentrectangle.Center.X.ToString();
+            YTextBox.Text = _currentrectangle.Center.Y.ToString();
+            IdTextBox.Text = _currentrectangle.Id.ToString();
 
         }
 
         private void RemoveRectangleButton_Click(object sender, EventArgs e)
         {
+            if (_rectanglePanels.Count > 0)
+            {
+                var selectedindex = AddingRectaglesListBox.SelectedIndex;
+                _rectanglePanels.RemoveAt(selectedindex);
+                _rectangle.RemoveAt(selectedindex);
+                CanvaPanel.Controls.RemoveAt(selectedindex);
+                UpdateListBoexs();
+                FindCollisions();
 
+            }
+            else
+            {
+                Clearinfo();
+            }
         }
 
         private void UpdateListBoexs()
         {
             AddingRectaglesListBox.Items.Clear();
+
             for (int i = 0; i < _rectangle.Count; i++)
             {
                 AddingRectaglesListBox.Items.Add(_rectangle[i].GetRectangleInfo());
             }
+
             AddingRectaglesListBox.SelectedIndex = _rectangle.Count - 1;
+        }
+        private void Clearinfo()
+        {
+            IdTextBox.Clear();
+            XTextBox.Clear();
+            YTextBox.Clear();
+            WidthTextBox.Clear();
+            HeightTextBox.Clear();
+        }
+
+        private void XTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (AddingRectaglesListBox.SelectedIndex == -1) return;
+
+            try
+            {
+                if (AddingRectaglesListBox.SelectedIndex >= 0)
+                {
+                    _currentrectangle.Center.X = int.Parse(XTextBox.Text);
+                    XTextBox.BackColor = Colors.CorrectColor;
+                    CanvaPanel.Controls[AddingRectaglesListBox.SelectedIndex].Location = new Point(_currentrectangle.Center.X, _currentrectangle.Center.Y);
+                    FindCollisions();
+                    UpdateRectangleInfo(_currentrectangle);
+                }
+            }
+            catch
+            {
+                XTextBox.BackColor = Colors.ErrorColor;
+            }
+
+        }
+
+        private void YTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (AddingRectaglesListBox.SelectedIndex == -1) return;
+
+            try
+            {
+                if (AddingRectaglesListBox.SelectedIndex >= 0)
+                {
+                    _currentrectangle.Center.Y = int.Parse(YTextBox.Text);
+                    YTextBox.BackColor = Colors.CorrectColor;
+                    CanvaPanel.Controls[AddingRectaglesListBox.SelectedIndex].Location = new Point(_currentrectangle.Center.X, _currentrectangle.Center.Y);
+                    FindCollisions();
+                    UpdateRectangleInfo(_currentrectangle);
+                }
+            }
+            catch
+            {
+                YTextBox.BackColor = Colors.ErrorColor;
+            }
+
+        }
+
+        private void WidthTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+            if (AddingRectaglesListBox.SelectedIndex == -1) return;
+
+            try
+            {
+                _currentrectangle.Width = int.Parse(WidthTextBox.Text);
+                WidthTextBox.BackColor = Colors.CorrectColor;
+                CanvaPanel.Controls[AddingRectaglesListBox.SelectedIndex].Width = _currentrectangle.Width;
+                FindCollisions();
+                UpdateRectangleInfo(_currentrectangle);
+            }
+            catch
+            {
+                WidthTextBox.BackColor = Colors.ErrorColor;
+            }
+        }
+
+        private void HeightTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (AddingRectaglesListBox.SelectedIndex == -1) return;
+
+            try
+            {
+                _currentrectangle.Height = int.Parse(HeightTextBox.Text);
+                HeightTextBox.BackColor = Colors.CorrectColor;
+                CanvaPanel.Controls[AddingRectaglesListBox.SelectedIndex].Height = _currentrectangle.Height;
+                FindCollisions();
+                UpdateRectangleInfo(_currentrectangle);
+            }
+            catch
+            {
+                HeightTextBox.BackColor = Colors.ErrorColor;
+            }
+
         }
     }
 }
