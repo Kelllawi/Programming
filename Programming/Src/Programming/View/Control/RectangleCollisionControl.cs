@@ -56,6 +56,7 @@ namespace Programming.View.Control
             }
 
             _rectanglePanels.Add(rectanglePanel);
+            CanvaPanel.Controls.Add(rectanglePanel);
         }
 
         private void AddingRectaglesListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -67,6 +68,21 @@ namespace Programming.View.Control
             }
             AddingRectaglesListBox.SelectedIndex = _rectangle.Count - 1;
 
+        }
+
+        private void RemoveRectangleButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateListBoexs()
+        {
+            AddingRectaglesListBox.Items.Clear();
+            for (int i = 0; i < _rectangle.Count; i++)
+            {
+                AddingRectaglesListBox.Items.Add(_rectangle[i].GetRectangleInfo());
+            }
+            AddingRectaglesListBox.SelectedIndex = _rectangle.Count - 1;
         }
     }
 }

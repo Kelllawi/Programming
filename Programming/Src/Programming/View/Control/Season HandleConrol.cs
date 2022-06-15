@@ -16,6 +16,12 @@ namespace Programming.View.Control
         public Season_HandleConrol()
         {
             InitializeComponent();
+            var values = Enum.GetValues(typeof(Season));
+            foreach (var value in values)
+            {
+                SeasonNamesComboBox.Items.Add(value.ToString());
+            }
+            SeasonNamesComboBox.SelectedIndex = 0;
         }
 
         private void GoButton_Click(object sender, EventArgs e)
