@@ -3,37 +3,19 @@ using System;
 
 namespace Programming.Model.Geometryy
 {
-    /// <summary>
-    /// Статический класс создания прямоугольников.
-    /// </summary>
+   
     public static class RectangleFactory
     {
-        /// <summary>
-        /// Отступ от краёв внутри панели.
-        /// </summary>
+        
         private static readonly int Margin = 15;
 
-        /// <summary>
-        /// Поле, которое представляет генератор случайных чисел.
-        /// </summary>
+       
         private static readonly Random _random = new Random();
 
-        /// <summary>
-        /// Минимальный размер прямоугольника.
-        /// </summary>
         private const int MinSize = 10;
 
-        /// <summary>
-        /// Максимальный размер прямоугольника.
-        /// </summary>
         private const int MaxSize = 100;
 
-        /// <summary>
-        /// Создаёт прямоугольник со случайными значениями.
-        /// </summary>
-        /// <param name="canvasWidth">Граница создания по ширине.</param>
-        /// <param name="canvasHeight">Граница создания по высоте.</param>
-        /// <returns>Возвращает экземпляр Rectangle со случайными значениями.</returns>
         public static Rectangle Randomize(int canvasWidth, int canvasHeight)
         {
             var rectangleHeight = _random.Next(MinSize, MaxSize);
@@ -51,10 +33,6 @@ namespace Programming.Model.Geometryy
                 );
         }
 
-        /// <summary>
-        /// Создаёт прямоугольник со случайными значениями.
-        /// </summary>
-        /// <returns>Возвращает экземпляр Rectangle со случайными значениями.</returns>
         public static Rectangle Randomize()
         {
             var colors = Enum.GetValues(typeof(Colors));
