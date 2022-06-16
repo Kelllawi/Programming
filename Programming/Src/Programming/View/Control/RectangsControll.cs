@@ -12,6 +12,7 @@ namespace Programming.View.Control
         private Rectangle[] _rectangles;
 
         private Rectangle _currentRectangle;
+        ToolTip toolTip = new ToolTip();
 
         public RectangsControll()
         {
@@ -62,8 +63,9 @@ namespace Programming.View.Control
                 _currentRectangle.Height = int.Parse(HeightRectangleTextBox.Text);
                 HeightRectangleTextBox.BackColor = Colors.CorrectColor;
             }
-            catch
+            catch (Exception ex)
             {
+                toolTip.SetToolTip(HeightRectangleTextBox, ex.Message);
                 HeightRectangleTextBox.BackColor = Colors.ErrorColor;
             }
         }
@@ -77,8 +79,9 @@ namespace Programming.View.Control
                 _currentRectangle.Width = int.Parse(WidthRectangleTextBox.Text);
                 WidthRectangleTextBox.BackColor = Colors.CorrectColor;
             }
-            catch
+            catch (Exception ex)
             {
+                toolTip.SetToolTip(WidthRectangleTextBox, ex.Message);
                 WidthRectangleTextBox.BackColor = Colors.ErrorColor;
             }
         }

@@ -15,6 +15,8 @@ namespace Programming.View.Control
         private Movie _currentMovie;
 
         private Random _random = new Random();
+        
+        ToolTip _toolTip= new ToolTip();
 
         public MoviesControl()
         {
@@ -81,8 +83,9 @@ namespace Programming.View.Control
                 int yearReleaseMovieValue = int.Parse(currentYearRelease);
                 _currentMovie.ReleaseYear = yearReleaseMovieValue;
             }
-            catch
+            catch  (Exception ex)
             {
+                _toolTip.SetToolTip(YearReleaseMovieTextBox, ex.Message);
                 YearReleaseMovieTextBox.BackColor = Colors.ErrorColor;
                 return;
             }
@@ -92,14 +95,16 @@ namespace Programming.View.Control
 
         private void DurationMinutesMovieTextBox_TextChanged_1(object sender, EventArgs e)
         {
+            
             try
             {
                 string currentDurationMinutes = DurationMinutesMovieTextBox.Text;
                 int durationMinutesMovieValue = int.Parse(currentDurationMinutes);
                 _currentMovie.DurationMinutes = durationMinutesMovieValue;
             }
-            catch
+            catch (Exception ex)
             {
+                _toolTip.SetToolTip(DurationMinutesMovieTextBox, ex.Message);
                 DurationMinutesMovieTextBox.BackColor = Colors.ErrorColor;
                 return;
             }
@@ -116,8 +121,9 @@ namespace Programming.View.Control
                 double ratingMovieValue = double.Parse(currentRating);
                 _currentMovie.Rating = ratingMovieValue;
             }
-            catch
+            catch (Exception ex)
             {
+                _toolTip.SetToolTip(RatingMovieTextBox, ex.Message);
                 RatingMovieTextBox.BackColor = Colors.ErrorColor;
                 return;
             }
@@ -133,7 +139,8 @@ namespace Programming.View.Control
 
         private void NameMovieTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            
+            
             string nameMovieValue = NameMovieTextBox.Text;
             _currentMovie.Name = nameMovieValue;
         }
