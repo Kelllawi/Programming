@@ -21,8 +21,14 @@ namespace Programming.View.Control
         /// Выбранный прямоугольник
         /// </summary>
         private Rectangle _currentrectangle;
+        /// <summary>
+        /// Коллекция отображаемых панелей
+        /// </summary>
         private List<Panel> _rectanglePanels = new List<Panel>();
 
+        /// <summary>
+        /// Создает экземпляр класса <see cref="RectangleCollisionControl"/>
+        /// </summary>
         public RectangleCollisionControl()
         {
             InitializeComponent();
@@ -47,13 +53,19 @@ namespace Programming.View.Control
         {
             RemoveRectangleButton.Image = Properties.Resources.rectangle_remove_24x24_uncolor;
         }
-
+        /// <summary>
+        /// Обновляет информацию в списке
+        /// </summary>
+        /// <param name="rectangle"> Прямоугольник которому нужно обновить информацию</param>
         private void UpdateRectangleInfo(Rectangle rectangle)
         {
             int index = AddingRectaglesListBox.FindString(rectangle.Id.ToString());
             AddingRectaglesListBox.Items[index] = rectangle.GetRectangleInfo();
         }
-
+        /// <summary>
+        /// Находит пересечение прямоугольников 
+        /// При пересечений красит в красный
+        /// </summary>
         private void FindCollisions()
         {
 
@@ -129,7 +141,9 @@ namespace Programming.View.Control
                 Clearinfo();
             }
         }
-
+        /// <summary>
+        /// Обновляет информацию в списке
+        /// </summary>
         private void UpdateListBoexs()
         {
             AddingRectaglesListBox.Items.Clear();
