@@ -47,6 +47,7 @@ namespace Programming.View.Control
 
         private void FindCollisions()
         {
+
             for (int n = 0; n < _rectangle.Count; n++)
             {
                 CanvaPanel.Controls[n].BackColor = Colors.IsNotCollision;
@@ -56,7 +57,7 @@ namespace Programming.View.Control
             {
                 for (int j = i + 1; j < _rectangle.Count; j++)
                 {
-                    if (CollisionManager.IsCollision(_rectangle[i], _rectangle[j]))
+                    if (CollisionManager.IsCollision(_rectangle[j], _rectangle[i]))
                     {
                         CanvaPanel.Controls[i].BackColor = Colors.IsCollision;
                         CanvaPanel.Controls[j].BackColor = Colors.IsCollision;
@@ -68,20 +69,22 @@ namespace Programming.View.Control
 
         private void AddRectangleButton_Click(object sender, EventArgs e)
         {
+
             var newRectangle = RectangleFactory.Randomize(CanvaPanel.Width, CanvaPanel.Height);
             _rectangle.Add(newRectangle);
 
-            Panel rectanglePanel = new Panel();
+            Panel rectanglePanel = new Panel
             {
-                Width = newRectangle.Width;
-                Height = newRectangle.Height;
-                Location = new Point(newRectangle.Center.X, newRectangle.Center.Y);
-                
-                BorderStyle = BorderStyle.FixedSingle;
-            }
+                Width = newRectangle.Width,
+                Height = newRectangle.Height,
+                Location = new Point(newRectangle.Center.X, newRectangle.Center.Y),
+                BackColor = Colors.IsNotCollision,
+                BorderStyle = BorderStyle.FixedSingle
+            };
 
             _rectanglePanels.Add(rectanglePanel);
             CanvaPanel.Controls.Add(rectanglePanel);
+            
 
             UpdateListBoexs();
         }
