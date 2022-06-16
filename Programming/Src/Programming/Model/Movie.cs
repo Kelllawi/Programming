@@ -1,16 +1,38 @@
 ﻿namespace Programming.Model
 {
     using System;
+    /// <summary>
+    /// Хранит информацию о фильмах
+    /// </summary>
     public class Movie
     {
+        /// <summary>
+        /// Год релиза фильма
+        /// </summary>
         private int _releaseYear;
+        /// <summary>
+        /// Рейтинг фильма
+        /// </summary>
         private double _rating;
+        /// <summary>
+        /// Длительность фильма в минутах
+        /// </summary>
         private int _durationMinutes;
 
+        /// <summary>
+        /// Создает экземпляр класса <see cref="Movie"/>
+        /// </summary>
         public Movie()
         {
         }
-
+        /// <summary>
+        /// Создает экземпляр класса <see cref="Movie"/>
+        /// </summary>
+        /// <param name="releaseYear">Год релиза фильма. От 1900 по нынешний год</param>
+        /// <param name="durationMinutes">Длительность фильма в минутах </param>
+        /// <param name="rating">Рейтинг фильма От 0 до 10</param>
+        /// <param name="name"> название фильма</param>
+        /// <param name="genre">Жанр фильма</param>
         public Movie(int releaseYear,
             int durationMinutes,
             int rating,
@@ -24,11 +46,18 @@
             Name = name;
             Genre = genre;
         }
-
+        /// <summary>
+        /// Возвращает и задает название фильма
+        /// </summary>
         public string Name { get; set; }
-
+        /// <summary>
+        /// Возвращает и задает жанр фильма
+        /// </summary>
         public string Genre { get; set; }
 
+        /// <summary>
+        /// Возвращает и задает длительность фильма в минутах
+        /// </summary>
         public int DurationMinutes
         {
             get
@@ -41,7 +70,9 @@
                 _durationMinutes = value;
             }
         }
-
+        /// <summary>
+        /// Возвращает и задает год релиза фильма От 1900 по нынешний год
+        /// </summary>
         public int ReleaseYear
         {
             get
@@ -54,6 +85,9 @@
                 _releaseYear = value;
             }
         }
+        /// <summary>
+        /// Возвращает и задает рейтинг фильма От 0 до 10
+        /// </summary>
 
         public double Rating
         {

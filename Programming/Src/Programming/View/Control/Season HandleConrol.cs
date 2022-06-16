@@ -11,12 +11,20 @@ using System.Windows.Forms;
 
 namespace Programming.View.Control
 {
+    /// <summary>
+    /// Представляет реализацию по выбору времени года
+    /// </summary>
     public partial class Season_HandleConrol : UserControl
     {
+        /// <summary>
+        /// Представляет реализацию по измененнию фона по времени года
+        /// </summary>
         public Season_HandleConrol()
         {
             InitializeComponent();
+
             var values = Enum.GetValues(typeof(Season));
+
             foreach (var value in values)
             {
                 SeasonNamesComboBox.Items.Add(value.ToString());

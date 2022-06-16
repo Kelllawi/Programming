@@ -5,13 +5,29 @@ using Colors = Programming.Model.AppColors;
 using Rectangle = Programming.Model.Geometryy.Rectangle;
 namespace Programming.View.Control
 {
+    /// <summary>
+    /// Представляет реализацию по представлению прямоугольников
+    /// </summary>
     public partial class RectangsControll : UserControl
     {
+        /// <summary>
+        /// Количество Прямоугольников
+        /// </summary>
         private const int RectanglesCount = 5;
 
+        /// <summary>
+        /// Коллекция прямоугольников
+        /// </summary>
         private Rectangle[] _rectangles;
 
+        /// <summary>
+        /// Выбранный прямоугольник
+        /// </summary>
         private Rectangle _currentRectangle;
+
+        /// <summary>
+        /// Сообщает об ошибке
+        /// </summary>
         ToolTip toolTip = new ToolTip();
 
         public RectangsControll()
@@ -21,6 +37,10 @@ namespace Programming.View.Control
             RectangleListBox.SelectedIndex = 0;
 
         }
+        /// <summary>
+        /// Создает коллекцию прямоугольников 
+        /// </summary>
+        /// <returns> возвращает коллекцию прямоугольников </returns>
         private Rectangle[] CreateRectangles()
         {
             Rectangle[] rectangles = new Rectangle[RectanglesCount];
@@ -85,6 +105,11 @@ namespace Programming.View.Control
                 WidthRectangleTextBox.BackColor = Colors.ErrorColor;
             }
         }
+        /// <summary>
+        /// Находит прямоугольник, чья ширина больше остальных
+        /// </summary>
+        /// <param name="rectangles"> Массив прямоугольников </param>
+        /// <returns> Возвращает индекс прямоугольника, чья ширина болье других</returns>
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
             int maxWidthIndex = 0;

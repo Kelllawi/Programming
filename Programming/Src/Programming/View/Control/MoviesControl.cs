@@ -6,16 +6,31 @@ using System.Windows.Forms;
 
 namespace Programming.View.Control
 {
+    /// <summary>
+    /// Представляет реализацию по представлению  фильмов
+    /// </summary>
     public partial class MoviesControl : UserControl
     {
+        /// <summary>
+        /// Количество фильмов
+        /// </summary>
         private const int ElementsCount = 5;
-
+        /// <summary>
+        /// Коллекция фильмов
+        /// </summary>
         private Movie[] _movies;
-
+        /// <summary>
+        /// Выбранный фильм
+        /// </summary>
         private Movie _currentMovie;
+        /// <summary>
+        /// Поле, которое предоставляет генерацию случайных чисел
+        /// </summary>
 
         private Random _random = new Random();
-        
+        /// <summary>
+        /// Сообщенает об ошибке
+        /// </summary>
         ToolTip _toolTip= new ToolTip();
 
         public MoviesControl()
@@ -23,6 +38,9 @@ namespace Programming.View.Control
             InitializeComponent();
             CreateMovies();
         }
+        /// <summary>
+        /// Создает коллекцию фильмов <see cref="CreateMovies"/>
+        /// </summary>
         private void CreateMovies()
         {
             _movies = new Movie[ElementsCount];
@@ -52,13 +70,17 @@ namespace Programming.View.Control
             DurationMinutesMovieTextBox.Text = _currentMovie.DurationMinutes.ToString();
             RatingMovieTextBox.Text = _currentMovie.Rating.ToString();
         }
-
+       
         private void FindMovieButton_Click(object sender, EventArgs e)
         {
             int findMaxRatingIndex = FindMovieWithMaxRating(_movies);
             MovieListBox.SelectedIndex = findMaxRatingIndex;
         }
-        
+        /// <summary>
+        /// Находит фильм, чей рейтинг больше остальных
+        /// </summary>
+        /// <param name="Movies"> Коллекция фильмов</param>
+        /// <returns> Возвращает индекс элемента, чей рейтинг больше остальных</returns>
         private int FindMovieWithMaxRating(Movie[] Movies)
         {
             int maxRatingIndex = 0;

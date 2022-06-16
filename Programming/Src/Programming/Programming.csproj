@@ -72,7 +72,7 @@
     <Compile Include="Model\Validator.cs" />
     <Compile Include="Model\Time.cs" />
     <Compile Include="Model\Song.cs" />
-    <Compile Include="Model\Route.cs" />
+    <Compile Include="Model\Flight.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\Contact.cs" />
     <Compile Include="Model\Enums\Colors.cs" />
