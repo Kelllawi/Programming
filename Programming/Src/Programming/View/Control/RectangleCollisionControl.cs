@@ -8,9 +8,18 @@ using Rectangle = Programming.Model.Geometryy.Rectangle;
 
 namespace Programming.View.Control
 {
+    /// <summary>
+    /// Реализация прямоугольников
+    /// </summary>
     public partial class RectangleCollisionControl : UserControl
     {
+        /// <summary>
+        /// Коллекция прямоугольников
+        /// </summary>
         private List<Rectangle> _rectangle = new List<Rectangle>();
+        /// <summary>
+        /// Выбранный прямоугольник
+        /// </summary>
         private Rectangle _currentrectangle;
         private List<Panel> _rectanglePanels = new List<Panel>();
 
