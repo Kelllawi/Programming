@@ -201,6 +201,9 @@
             // 
             // CanvaPanel
             // 
+            this.CanvaPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CanvaPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CanvaPanel.Location = new System.Drawing.Point(274, 22);
             this.CanvaPanel.Name = "CanvaPanel";
