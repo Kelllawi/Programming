@@ -57,7 +57,7 @@
             this.MainTabControl.Location = new System.Drawing.Point(0, 0);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(734, 401);
+            this.MainTabControl.Size = new System.Drawing.Size(792, 422);
             this.MainTabControl.TabIndex = 0;
             // 
             // EnumerationTabPage
@@ -68,14 +68,14 @@
             this.EnumerationTabPage.Location = new System.Drawing.Point(4, 22);
             this.EnumerationTabPage.Name = "EnumerationTabPage";
             this.EnumerationTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.EnumerationTabPage.Size = new System.Drawing.Size(726, 375);
+            this.EnumerationTabPage.Size = new System.Drawing.Size(784, 396);
             this.EnumerationTabPage.TabIndex = 1;
             this.EnumerationTabPage.Text = "Enums";
             this.EnumerationTabPage.UseVisualStyleBackColor = true;
             // 
             // weekdayParsingControl1
             // 
-            this.weekdayParsingControl1.Location = new System.Drawing.Point(5, 278);
+            this.weekdayParsingControl1.Location = new System.Drawing.Point(7, 226);
             this.weekdayParsingControl1.Margin = new System.Windows.Forms.Padding(2);
             this.weekdayParsingControl1.Name = "weekdayParsingControl1";
             this.weekdayParsingControl1.Size = new System.Drawing.Size(321, 89);
@@ -83,9 +83,11 @@
             // 
             // season_HandleConrol1
             // 
-            this.season_HandleConrol1.Location = new System.Drawing.Point(377, 278);
+            this.season_HandleConrol1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.season_HandleConrol1.Location = new System.Drawing.Point(333, 226);
             this.season_HandleConrol1.Name = "season_HandleConrol1";
-            this.season_HandleConrol1.Size = new System.Drawing.Size(343, 89);
+            this.season_HandleConrol1.Size = new System.Drawing.Size(346, 89);
             this.season_HandleConrol1.TabIndex = 1;
             // 
             // enumerationsControl1
@@ -93,7 +95,7 @@
             this.enumerationsControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.enumerationsControl1.Location = new System.Drawing.Point(3, 3);
             this.enumerationsControl1.Name = "enumerationsControl1";
-            this.enumerationsControl1.Size = new System.Drawing.Size(720, 369);
+            this.enumerationsControl1.Size = new System.Drawing.Size(778, 390);
             this.enumerationsControl1.TabIndex = 0;
             // 
             // ClassesTabPage
@@ -170,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 401);
+            this.ClientSize = new System.Drawing.Size(792, 422);
             this.Controls.Add(this.MainTabControl);
             this.Name = "MainForm";
             this.ShowIcon = false;
