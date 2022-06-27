@@ -30,5 +30,7 @@ namespace Programming.View.Controls
                 OutLabel.Text = "Нет такого дня недели!";
             }
         }
+
+       
     }
 }

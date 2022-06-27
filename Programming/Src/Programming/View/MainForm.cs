@@ -28,13 +28,7 @@ namespace Programming.View
            
             
         }
-  
 
-        private void RectanglesGroupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        
+       
     }
 }

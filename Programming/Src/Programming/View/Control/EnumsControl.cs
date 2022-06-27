@@ -68,5 +68,6 @@ namespace Programming.View.Control
             var item = ValueListBox.SelectedItem;
             IntValueTextBox.Text = ((int)item).ToString();
         }
+
     }
 }

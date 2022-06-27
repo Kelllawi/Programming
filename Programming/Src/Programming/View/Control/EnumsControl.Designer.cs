@@ -28,79 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ChooseEnumLabel = new System.Windows.Forms.Label();
-            this.EnumListBox = new System.Windows.Forms.ListBox();
             this.ValueListBox = new System.Windows.Forms.ListBox();
-            this.ChooseValueLabel = new System.Windows.Forms.Label();
             this.IntValueLabel = new System.Windows.Forms.Label();
             this.IntValueTextBox = new System.Windows.Forms.TextBox();
+            this.EnumListBox = new System.Windows.Forms.ListBox();
+            this.ChooseEnumLabel = new System.Windows.Forms.Label();
+            this.ChooseValueLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // ChooseEnumLabel
-            // 
-            this.ChooseEnumLabel.AutoSize = true;
-            this.ChooseEnumLabel.Location = new System.Drawing.Point(3, 0);
-            this.ChooseEnumLabel.Name = "ChooseEnumLabel";
-            this.ChooseEnumLabel.Size = new System.Drawing.Size(107, 13);
-            this.ChooseEnumLabel.TabIndex = 2;
-            this.ChooseEnumLabel.Text = "Choose enumeration:";
-            // 
-            // EnumListBox
-            // 
-            this.EnumListBox.FormattingEnabled = true;
-            this.EnumListBox.Location = new System.Drawing.Point(6, 16);
-            this.EnumListBox.Name = "EnumListBox";
-            this.EnumListBox.Size = new System.Drawing.Size(150, 199);
-            this.EnumListBox.TabIndex = 3;
-            this.EnumListBox.SelectedIndexChanged += new System.EventHandler(this.EnumListBox_SelectedIndexChanged);
             // 
             // ValueListBox
             // 
             this.ValueListBox.FormattingEnabled = true;
-            this.ValueListBox.Location = new System.Drawing.Point(162, 16);
+            this.ValueListBox.Location = new System.Drawing.Point(5, 24);
             this.ValueListBox.Name = "ValueListBox";
             this.ValueListBox.Size = new System.Drawing.Size(150, 199);
-            this.ValueListBox.TabIndex = 4;
+            this.ValueListBox.TabIndex = 10;
             this.ValueListBox.SelectedIndexChanged += new System.EventHandler(this.ValueListBox_SelectedIndexChanged);
-            // 
-            // ChooseValueLabel
-            // 
-            this.ChooseValueLabel.AutoSize = true;
-            this.ChooseValueLabel.Location = new System.Drawing.Point(159, 0);
-            this.ChooseValueLabel.Name = "ChooseValueLabel";
-            this.ChooseValueLabel.Size = new System.Drawing.Size(75, 13);
-            this.ChooseValueLabel.TabIndex = 5;
-            this.ChooseValueLabel.Text = "Choose value:";
             // 
             // IntValueLabel
             // 
             this.IntValueLabel.AutoSize = true;
-            this.IntValueLabel.Location = new System.Drawing.Point(339, 0);
+            this.IntValueLabel.Location = new System.Drawing.Point(314, 5);
             this.IntValueLabel.Name = "IntValueLabel";
             this.IntValueLabel.Size = new System.Drawing.Size(51, 13);
-            this.IntValueLabel.TabIndex = 6;
+            this.IntValueLabel.TabIndex = 12;
             this.IntValueLabel.Text = "Int value:";
             // 
             // IntValueTextBox
             // 
-            this.IntValueTextBox.Location = new System.Drawing.Point(318, 16);
+            this.IntValueTextBox.Location = new System.Drawing.Point(317, 24);
             this.IntValueTextBox.Name = "IntValueTextBox";
             this.IntValueTextBox.ReadOnly = true;
             this.IntValueTextBox.Size = new System.Drawing.Size(185, 20);
-            this.IntValueTextBox.TabIndex = 7;
+            this.IntValueTextBox.TabIndex = 13;
+            // 
+            // EnumListBox
+            // 
+            this.EnumListBox.FormattingEnabled = true;
+            this.EnumListBox.Location = new System.Drawing.Point(161, 24);
+            this.EnumListBox.Name = "EnumListBox";
+            this.EnumListBox.Size = new System.Drawing.Size(150, 199);
+            this.EnumListBox.TabIndex = 9;
+            this.EnumListBox.SelectedIndexChanged += new System.EventHandler(this.EnumListBox_SelectedIndexChanged);
+            // 
+            // ChooseEnumLabel
+            // 
+            this.ChooseEnumLabel.AutoSize = true;
+            this.ChooseEnumLabel.Location = new System.Drawing.Point(5, 5);
+            this.ChooseEnumLabel.Name = "ChooseEnumLabel";
+            this.ChooseEnumLabel.Size = new System.Drawing.Size(107, 13);
+            this.ChooseEnumLabel.TabIndex = 8;
+            this.ChooseEnumLabel.Text = "Choose enumeration:";
+            // 
+            // ChooseValueLabel
+            // 
+            this.ChooseValueLabel.AutoSize = true;
+            this.ChooseValueLabel.Location = new System.Drawing.Point(158, 5);
+            this.ChooseValueLabel.Name = "ChooseValueLabel";
+            this.ChooseValueLabel.Size = new System.Drawing.Size(75, 13);
+            this.ChooseValueLabel.TabIndex = 11;
+            this.ChooseValueLabel.Text = "Choose value:";
             // 
             // EnumerationsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.IntValueTextBox);
-            this.Controls.Add(this.IntValueLabel);
-            this.Controls.Add(this.ChooseValueLabel);
             this.Controls.Add(this.ValueListBox);
+            this.Controls.Add(this.IntValueLabel);
+            this.Controls.Add(this.IntValueTextBox);
             this.Controls.Add(this.EnumListBox);
             this.Controls.Add(this.ChooseEnumLabel);
+            this.Controls.Add(this.ChooseValueLabel);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EnumerationsControl";
-            this.Size = new System.Drawing.Size(571, 294);
+            this.Size = new System.Drawing.Size(508, 240);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,11 +109,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label ChooseEnumLabel;
-        private System.Windows.Forms.ListBox EnumListBox;
         private System.Windows.Forms.ListBox ValueListBox;
-        private System.Windows.Forms.Label ChooseValueLabel;
         private System.Windows.Forms.Label IntValueLabel;
         private System.Windows.Forms.TextBox IntValueTextBox;
+        private System.Windows.Forms.ListBox EnumListBox;
+        private System.Windows.Forms.Label ChooseEnumLabel;
+        private System.Windows.Forms.Label ChooseValueLabel;
     }
 }
