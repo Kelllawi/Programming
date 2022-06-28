@@ -41,11 +41,11 @@ namespace Programming.View.Control
             {
                 case Season.Winter:
                     BackColor = Colors.Winter;
-                    MessageBox.Show("Бррр! Холодно!");
+                    MessageBox.Show("Brrrr! Сoldly!");
                     break;
                 case Season.Summer:
                     BackColor = Colors.Summer;
-                    MessageBox.Show("Ура! Солнце!");
+                    MessageBox.Show("Yeaaa! Sun!");
                     break;
                 case Season.Spring:
                     BackColor = Colors.Spring;
