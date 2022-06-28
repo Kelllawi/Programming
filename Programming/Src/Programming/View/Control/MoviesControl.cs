@@ -15,19 +15,22 @@ namespace Programming.View.Control
         /// Количество фильмов
         /// </summary>
         private const int ElementsCount = 5;
+
         /// <summary>
-        /// Коллекция фильмов
+        /// Массив фильмов
         /// </summary>
         private Movie[] _movies;
+
         /// <summary>
         /// Выбранный фильм
         /// </summary>
         private Movie _currentMovie;
+
         /// <summary>
         /// Поле, которое предоставляет генерацию случайных чисел
         /// </summary>
-
         private Random _random = new Random();
+
         /// <summary>
         /// Сообщенает об ошибке
         /// </summary>

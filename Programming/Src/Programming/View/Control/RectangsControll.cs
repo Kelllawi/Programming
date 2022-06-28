@@ -16,7 +16,7 @@ namespace Programming.View.Control
         private const int RectanglesCount = 5;
 
         /// <summary>
-        /// Коллекция прямоугольников
+        /// Массив прямоугольников
         /// </summary>
         private Rectangle[] _rectangles;
 
@@ -30,6 +30,9 @@ namespace Programming.View.Control
         /// </summary>
         ToolTip toolTip = new ToolTip();
 
+        /// <summary>
+        /// Создает экземпляр класса <see cref="RectangsControll"/>
+        /// </summary>
         public RectangsControll()
         {
             InitializeComponent();

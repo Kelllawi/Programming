@@ -18,7 +18,7 @@ namespace Programming.View.Control
     public partial class Season_HandleConrol : UserControl
     {
         /// <summary>
-        /// Представляет реализацию по измененнию фона по времени года
+        /// Создает Экземпляр класса <see cref="Season_HandleConrol"/>
         /// </summary>
         public Season_HandleConrol()
         {
