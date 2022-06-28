@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Programming.Model.Enums;
 using System.Windows.Forms;
+using Colors = Programming.Model.AppColors;
 
 namespace Programming.View.Control
 {
@@ -22,7 +23,7 @@ namespace Programming.View.Control
         public Season_HandleConrol()
         {
             InitializeComponent();
-
+            
             var values = Enum.GetValues(typeof(Season));
 
             foreach (var value in values)
@@ -30,6 +31,8 @@ namespace Programming.View.Control
                 SeasonNamesComboBox.Items.Add(value.ToString());
             }
             SeasonNamesComboBox.SelectedIndex = 0;
+
+            SeasonNamesComboBox.DataSource = Enum.GetValues(typeof(Season));
         }
 
         private void GoButton_Click(object sender, EventArgs e)
@@ -37,18 +40,18 @@ namespace Programming.View.Control
             switch (SeasonNamesComboBox.SelectedItem)
             {
                 case Season.Winter:
-                    this.BackColor = DefaultBackColor;
+                    BackColor = Colors.Winter;
                     MessageBox.Show("Бррр! Холодно!");
                     break;
                 case Season.Summer:
-                    this.BackColor = DefaultBackColor;
+                    BackColor = Colors.Summer;
                     MessageBox.Show("Ура! Солнце!");
                     break;
                 case Season.Spring:
-                    this.BackColor = ColorTranslator.FromHtml("#559c45");
+                    BackColor = Colors.Spring;
                     break;
                 case Season.Autumn:
-                    this.BackColor = ColorTranslator.FromHtml("#e29c45");
+                    BackColor = Colors.Autumn;
                     break;
             }
         }
