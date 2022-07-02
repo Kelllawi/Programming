@@ -31,10 +31,12 @@ namespace Programming.Model.Geometryy
             OuterRadius = outerRadius;
             InnerRadius = innerRadius;
         }
+
         /// <summary>
         /// Возвращает и задает координаты центра кольца
         /// </summary>
         public Point2D Center { get; set; }
+
         /// <summary>
         /// Возвращает и задает внещний радиус кольца 
         /// Больше внутреннего
@@ -53,6 +55,7 @@ namespace Programming.Model.Geometryy
                 _outerRadius = value;
             }
         }
+
         /// <summary>
         /// Возвращает и задает внутренний радиус колько Положительно число
         /// Меньше внешнего кольца

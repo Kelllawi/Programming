@@ -1,6 +1,6 @@
 ﻿namespace Programming.View.Control
 {
-    partial class RectangsControll
+    partial class RectanglesControll
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -161,7 +161,7 @@
             this.RectangleListBox.TabIndex = 20;
             this.RectangleListBox.SelectedIndexChanged += new System.EventHandler(this.RectangleListBox_SelectedIndexChanged);
             // 
-            // RectangsControll
+            // RectanglesControll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +179,7 @@
             this.Controls.Add(this.HeightRectangleTextBox);
             this.Controls.Add(this.HeightRectangleLabel);
             this.Controls.Add(this.RectangleListBox);
-            this.Name = "RectangsControll";
+            this.Name = "RectanglesControll";
             this.Size = new System.Drawing.Size(256, 313);
             this.ResumeLayout(false);
             this.PerformLayout();

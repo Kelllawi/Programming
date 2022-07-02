@@ -8,7 +8,7 @@ namespace Programming.View.Control
     /// <summary>
     /// Представляет реализацию по представлению прямоугольников
     /// </summary>
-    public partial class RectangsControll : UserControl
+    public partial class RectanglesControll : UserControl
     {
         /// <summary>
         /// Количество Прямоугольников
@@ -31,15 +31,16 @@ namespace Programming.View.Control
         ToolTip toolTip = new ToolTip();
 
         /// <summary>
-        /// Создает экземпляр класса <see cref="RectangsControll"/>
+        /// Создает экземпляр класса <see cref="RectanglesControll"/>
         /// </summary>
-        public RectangsControll()
+        public RectanglesControll()
         {
             InitializeComponent();
             _rectangles = CreateRectangles();
             RectangleListBox.SelectedIndex = 0;
 
         }
+
         /// <summary>
         /// Создает коллекцию прямоугольников 
         /// </summary>
@@ -54,6 +55,27 @@ namespace Programming.View.Control
                 RectangleListBox.Items.Add($"Rectangle {_currentRectangle.Id}");
             }
             return rectangles;
+        }
+
+        /// <summary>
+        /// Находит прямоугольник, чья ширина больше остальных
+        /// </summary>
+        /// <param name="rectangles"> Массив прямоугольников </param>
+        /// <returns> Возвращает индекс прямоугольника, чья ширина болье других</returns>
+        private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
+        {
+            int maxWidthIndex = 0;
+            double maxValue = rectangles[0].Width;
+            for (int i = 0; i < RectanglesCount; i++)
+            {
+                if (rectangles[i].Width > maxValue)
+                {
+                    maxValue = rectangles[i].Width;
+                    maxWidthIndex = i;
+                }
+            }
+
+            return maxWidthIndex;
         }
 
         private void RectangleListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -108,25 +130,6 @@ namespace Programming.View.Control
                 WidthRectangleTextBox.BackColor = Colors.ErrorColor;
             }
         }
-        /// <summary>
-        /// Находит прямоугольник, чья ширина больше остальных
-        /// </summary>
-        /// <param name="rectangles"> Массив прямоугольников </param>
-        /// <returns> Возвращает индекс прямоугольника, чья ширина болье других</returns>
-        private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
-        {
-            int maxWidthIndex = 0;
-            double maxValue = rectangles[0].Width;
-            for (int i = 0; i < RectanglesCount; i++)
-            {
-                if (rectangles[i].Width > maxValue)
-                {
-                    maxValue = rectangles[i].Width;
-                    maxWidthIndex = i;
-                }
-            }
-
-            return maxWidthIndex;
-        }
+       
     }
 }

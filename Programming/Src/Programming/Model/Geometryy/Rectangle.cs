@@ -54,14 +54,17 @@
             _allRectanglesCount++;
             _id = AllRectanglesCount;
         }
+
         /// <summary>
         /// Возвращает и задает координаты прямоугольника
         /// </summary>
         public Point2D Center { get; set; }
+
         /// <summary>
         /// Возвращает и задает цвет прямоугольника
         /// </summary>
         public string Color { get; set; }
+
         /// <summary>
         /// Возвращает индефикатор прямоугольника
         /// </summary>
@@ -72,6 +75,7 @@
                 return _id;
             }
         }
+
         /// <summary>
         /// Предоставляет информацию о прямоугольника
         /// </summary>

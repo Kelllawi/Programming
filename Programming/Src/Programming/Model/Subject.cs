@@ -10,12 +10,14 @@
         /// Оценка по дисциплине 
         /// </summary>
         private int _mark;
+
         /// <summary>
         /// Созадет экземпляр класса <see cref="Subject"/>
         /// </summary>
         public Subject()
         {
         }
+
         /// <summary>
         /// Созадет экземпляр класса <see cref="Subject"/>
         /// </summary>
@@ -27,10 +29,12 @@
             Name = name;
             Mark = mark;
         }
+
         /// <summary>
         /// Возвращает и задает имя ученика
         /// </summary>
         public string Name { get; set; }
+
         /// <summary>
         /// возвращает и задает оценку по дисциплине
         /// </summary>

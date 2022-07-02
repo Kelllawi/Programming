@@ -10,6 +10,7 @@
         /// Дилтельность песни в секундах
         /// </summary>
         private int _durationSeconds;
+
         /// <summary>
         /// Созадет экземпляр класса <see cref="Song"/>
         /// </summary>
@@ -31,14 +32,17 @@
             Name = name;
             DurationSeconds = durationSeconds;
         }
+
         /// <summary>
         /// Возвращает и задает Имя артиста
         /// </summary>
         public string Artist { get; set; }
+
         /// <summary>
         /// Возвращает и задает название песни
         /// </summary>
         public string Name { get; set; }
+
         /// <summary>
         /// Возвращает и задает длительность песни в секундах
         /// </summary>

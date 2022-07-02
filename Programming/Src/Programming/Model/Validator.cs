@@ -20,6 +20,7 @@
                     $"the value of the {nameProperty} field must be positive");
             }
         }
+
         /// <summary>
         /// Проверяет является ли число положительным
         /// </summary>
@@ -34,6 +35,7 @@
                     $"the value of the {nameProperty} field must be positive");
             }
         }
+
         /// <summary>
         /// Проверяет находится ли число в данном диапазоне
         /// </summary>
@@ -50,6 +52,7 @@
                     $"the value of the {nameProperty} field should be between {min} and {max} (inclusive)");
             }
         }
+
         /// <summary>
         /// Проверяет находится ли число в данном диапазоне
         /// </summary>
@@ -66,6 +69,7 @@
                     $"the value of the {nameProperty} field should be between {min} and {max} (inclusive)");
             }
         }
+
         /// <summary>
         /// Проверяет находится ли число в данном диапазоне
         /// </summary>
@@ -82,6 +86,7 @@
                     $"the value of the {nameProperty} field should be between {min} and {max} (inclusive)");
             }
         }
+
         /// <summary>
         /// Проверяет состоит ли строка только из букв английского алфавита
         /// </summary>

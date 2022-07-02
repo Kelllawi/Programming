@@ -32,18 +32,18 @@
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.EnumerationTabPage = new System.Windows.Forms.TabPage();
             this.enumerationsGroupBox = new System.Windows.Forms.GroupBox();
-            this.enumerationsControl1 = new Programming.View.Control.EnumerationsControl();
+            this.EnumerationsControl = new Programming.View.Control.EnumerationsControl();
             this.seasonGroupBox = new System.Windows.Forms.GroupBox();
-            this.season_HandleConrol1 = new Programming.View.Control.Season_HandleConrol();
+            this.Season_HandleConrol = new Programming.View.Control.Season_HandleConrol();
             this.weekdayGroupBox = new System.Windows.Forms.GroupBox();
-            this.weekdayParsingControl1 = new Programming.View.Controls.WeekdayParsingControl();
+            this.WeekdayParsingControl = new Programming.View.Controls.WeekdayParsingControl();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
-            this.filmGroupBox = new System.Windows.Forms.GroupBox();
-            this.moviesControl1 = new Programming.View.Control.MoviesControl();
+            this.FilmGroupBox = new System.Windows.Forms.GroupBox();
+            this.MoviesControl = new Programming.View.Control.MoviesControl();
             this.rectangleGroupBox = new System.Windows.Forms.GroupBox();
-            this.rectangsControll1 = new Programming.View.Control.RectangsControll();
+            this.RectanglesControll = new Programming.View.Control.RectanglesControll();
             this.Reactagles = new System.Windows.Forms.TabPage();
-            this.rectangleCollisionControl1 = new Programming.View.Control.RectangleCollisionControl();
+            this.RectangleCollisionControl = new Programming.View.Control.RectangleCollisionControl();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.MainTabControl.SuspendLayout();
             this.EnumerationTabPage.SuspendLayout();
@@ -51,7 +51,7 @@
             this.seasonGroupBox.SuspendLayout();
             this.weekdayGroupBox.SuspendLayout();
             this.ClassesTabPage.SuspendLayout();
-            this.filmGroupBox.SuspendLayout();
+            this.FilmGroupBox.SuspendLayout();
             this.rectangleGroupBox.SuspendLayout();
             this.Reactagles.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +86,7 @@
             this.enumerationsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.enumerationsGroupBox.Controls.Add(this.enumerationsControl1);
+            this.enumerationsGroupBox.Controls.Add(this.EnumerationsControl);
             this.enumerationsGroupBox.Location = new System.Drawing.Point(3, 5);
             this.enumerationsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.enumerationsGroupBox.Name = "enumerationsGroupBox";
@@ -96,20 +96,20 @@
             this.enumerationsGroupBox.TabStop = false;
             this.enumerationsGroupBox.Text = "Enumerations";
             // 
-            // enumerationsControl1
+            // EnumerationsControl
             // 
-            this.enumerationsControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.enumerationsControl1.Location = new System.Drawing.Point(2, 15);
-            this.enumerationsControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.enumerationsControl1.Name = "enumerationsControl1";
-            this.enumerationsControl1.Size = new System.Drawing.Size(618, 235);
-            this.enumerationsControl1.TabIndex = 0;
+            this.EnumerationsControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EnumerationsControl.Location = new System.Drawing.Point(2, 15);
+            this.EnumerationsControl.Margin = new System.Windows.Forms.Padding(2);
+            this.EnumerationsControl.Name = "EnumerationsControl";
+            this.EnumerationsControl.Size = new System.Drawing.Size(618, 235);
+            this.EnumerationsControl.TabIndex = 0;
             // 
             // seasonGroupBox
             // 
             this.seasonGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.seasonGroupBox.Controls.Add(this.season_HandleConrol1);
+            this.seasonGroupBox.Controls.Add(this.Season_HandleConrol);
             this.seasonGroupBox.Location = new System.Drawing.Point(317, 261);
             this.seasonGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.seasonGroupBox.Name = "seasonGroupBox";
@@ -119,18 +119,18 @@
             this.seasonGroupBox.TabStop = false;
             this.seasonGroupBox.Text = "Season Handle";
             // 
-            // season_HandleConrol1
+            // Season_HandleConrol
             // 
-            this.season_HandleConrol1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.season_HandleConrol1.Location = new System.Drawing.Point(2, 15);
-            this.season_HandleConrol1.Name = "season_HandleConrol1";
-            this.season_HandleConrol1.Size = new System.Drawing.Size(297, 115);
-            this.season_HandleConrol1.TabIndex = 0;
+            this.Season_HandleConrol.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Season_HandleConrol.Location = new System.Drawing.Point(2, 15);
+            this.Season_HandleConrol.Name = "Season_HandleConrol";
+            this.Season_HandleConrol.Size = new System.Drawing.Size(297, 115);
+            this.Season_HandleConrol.TabIndex = 0;
             // 
             // weekdayGroupBox
             // 
             this.weekdayGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.weekdayGroupBox.Controls.Add(this.weekdayParsingControl1);
+            this.weekdayGroupBox.Controls.Add(this.WeekdayParsingControl);
             this.weekdayGroupBox.Location = new System.Drawing.Point(7, 261);
             this.weekdayGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.weekdayGroupBox.Name = "weekdayGroupBox";
@@ -140,18 +140,18 @@
             this.weekdayGroupBox.TabStop = false;
             this.weekdayGroupBox.Text = "Weekday Parsing";
             // 
-            // weekdayParsingControl1
+            // WeekdayParsingControl
             // 
-            this.weekdayParsingControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weekdayParsingControl1.Location = new System.Drawing.Point(2, 15);
-            this.weekdayParsingControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.weekdayParsingControl1.Name = "weekdayParsingControl1";
-            this.weekdayParsingControl1.Size = new System.Drawing.Size(302, 115);
-            this.weekdayParsingControl1.TabIndex = 0;
+            this.WeekdayParsingControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WeekdayParsingControl.Location = new System.Drawing.Point(2, 15);
+            this.WeekdayParsingControl.Margin = new System.Windows.Forms.Padding(2);
+            this.WeekdayParsingControl.Name = "WeekdayParsingControl";
+            this.WeekdayParsingControl.Size = new System.Drawing.Size(302, 115);
+            this.WeekdayParsingControl.TabIndex = 0;
             // 
             // ClassesTabPage
             // 
-            this.ClassesTabPage.Controls.Add(this.filmGroupBox);
+            this.ClassesTabPage.Controls.Add(this.FilmGroupBox);
             this.ClassesTabPage.Controls.Add(this.rectangleGroupBox);
             this.ClassesTabPage.Location = new System.Drawing.Point(4, 22);
             this.ClassesTabPage.Name = "ClassesTabPage";
@@ -161,33 +161,33 @@
             this.ClassesTabPage.Text = "Classes";
             this.ClassesTabPage.UseVisualStyleBackColor = true;
             // 
-            // filmGroupBox
+            // FilmGroupBox
             // 
-            this.filmGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.FilmGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.filmGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.filmGroupBox.Controls.Add(this.moviesControl1);
-            this.filmGroupBox.Location = new System.Drawing.Point(304, 6);
-            this.filmGroupBox.Name = "filmGroupBox";
-            this.filmGroupBox.Size = new System.Drawing.Size(313, 386);
-            this.filmGroupBox.TabIndex = 2;
-            this.filmGroupBox.TabStop = false;
-            this.filmGroupBox.Text = "Movies";
+            this.FilmGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FilmGroupBox.Controls.Add(this.MoviesControl);
+            this.FilmGroupBox.Location = new System.Drawing.Point(304, 6);
+            this.FilmGroupBox.Name = "FilmGroupBox";
+            this.FilmGroupBox.Size = new System.Drawing.Size(313, 386);
+            this.FilmGroupBox.TabIndex = 2;
+            this.FilmGroupBox.TabStop = false;
+            this.FilmGroupBox.Text = "Movies";
             // 
-            // moviesControl1
+            // MoviesControl
             // 
-            this.moviesControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.moviesControl1.Location = new System.Drawing.Point(3, 16);
-            this.moviesControl1.Name = "moviesControl1";
-            this.moviesControl1.Size = new System.Drawing.Size(307, 367);
-            this.moviesControl1.TabIndex = 0;
+            this.MoviesControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoviesControl.Location = new System.Drawing.Point(3, 16);
+            this.MoviesControl.Name = "MoviesControl";
+            this.MoviesControl.Size = new System.Drawing.Size(307, 367);
+            this.MoviesControl.TabIndex = 0;
             // 
             // rectangleGroupBox
             // 
             this.rectangleGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.rectangleGroupBox.Controls.Add(this.rectangsControll1);
+            this.rectangleGroupBox.Controls.Add(this.RectanglesControll);
             this.rectangleGroupBox.Location = new System.Drawing.Point(7, 5);
             this.rectangleGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.rectangleGroupBox.Name = "rectangleGroupBox";
@@ -197,17 +197,17 @@
             this.rectangleGroupBox.TabStop = false;
             this.rectangleGroupBox.Text = "Rectangles";
             // 
-            // rectangsControll1
+            // RectanglesControll
             // 
-            this.rectangsControll1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rectangsControll1.Location = new System.Drawing.Point(2, 15);
-            this.rectangsControll1.Name = "rectangsControll1";
-            this.rectangsControll1.Size = new System.Drawing.Size(288, 371);
-            this.rectangsControll1.TabIndex = 0;
+            this.RectanglesControll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RectanglesControll.Location = new System.Drawing.Point(2, 15);
+            this.RectanglesControll.Name = "RectanglesControll";
+            this.RectanglesControll.Size = new System.Drawing.Size(288, 371);
+            this.RectanglesControll.TabIndex = 0;
             // 
             // Reactagles
             // 
-            this.Reactagles.Controls.Add(this.rectangleCollisionControl1);
+            this.Reactagles.Controls.Add(this.RectangleCollisionControl);
             this.Reactagles.Location = new System.Drawing.Point(4, 22);
             this.Reactagles.Name = "Reactagles";
             this.Reactagles.Padding = new System.Windows.Forms.Padding(3);
@@ -216,13 +216,13 @@
             this.Reactagles.Text = "Rectangles";
             this.Reactagles.UseVisualStyleBackColor = true;
             // 
-            // rectangleCollisionControl1
+            // RectangleCollisionControl
             // 
-            this.rectangleCollisionControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rectangleCollisionControl1.Location = new System.Drawing.Point(3, 3);
-            this.rectangleCollisionControl1.Name = "rectangleCollisionControl1";
-            this.rectangleCollisionControl1.Size = new System.Drawing.Size(619, 394);
-            this.rectangleCollisionControl1.TabIndex = 0;
+            this.RectangleCollisionControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RectangleCollisionControl.Location = new System.Drawing.Point(3, 3);
+            this.RectangleCollisionControl.Name = "RectangleCollisionControl";
+            this.RectangleCollisionControl.Size = new System.Drawing.Size(619, 394);
+            this.RectangleCollisionControl.TabIndex = 0;
             // 
             // toolTip
             // 
@@ -244,7 +244,7 @@
             this.seasonGroupBox.ResumeLayout(false);
             this.weekdayGroupBox.ResumeLayout(false);
             this.ClassesTabPage.ResumeLayout(false);
-            this.filmGroupBox.ResumeLayout(false);
+            this.FilmGroupBox.ResumeLayout(false);
             this.rectangleGroupBox.ResumeLayout(false);
             this.Reactagles.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -257,19 +257,19 @@
         private System.Windows.Forms.TabControl MainTabControl;
         private System.Windows.Forms.TabPage ClassesTabPage;
         private System.Windows.Forms.TabPage Reactagles;
-        private Control.RectangleCollisionControl rectangleCollisionControl1;
+        private Control.RectangleCollisionControl RectangleCollisionControl;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.TabPage EnumerationTabPage;
         private System.Windows.Forms.GroupBox enumerationsGroupBox;
         private System.Windows.Forms.GroupBox seasonGroupBox;
         private System.Windows.Forms.GroupBox weekdayGroupBox;
-        private Control.EnumerationsControl enumerationsControl1;
-        private Control.Season_HandleConrol season_HandleConrol1;
-        private Controls.WeekdayParsingControl weekdayParsingControl1;
-        private System.Windows.Forms.GroupBox filmGroupBox;
-        private Control.MoviesControl moviesControl1;
+        private Control.EnumerationsControl EnumerationsControl;
+        private Control.Season_HandleConrol Season_HandleConrol;
+        private Controls.WeekdayParsingControl WeekdayParsingControl;
+        private System.Windows.Forms.GroupBox FilmGroupBox;
+        private Control.MoviesControl MoviesControl;
         private System.Windows.Forms.GroupBox rectangleGroupBox;
-        private Control.RectangsControll rectangsControll1;
+        private Control.RectanglesControll RectanglesControll;
     }
 }
 

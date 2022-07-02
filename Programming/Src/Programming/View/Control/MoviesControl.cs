@@ -41,6 +41,28 @@ namespace Programming.View.Control
             InitializeComponent();
             CreateMovies();
         }
+
+        /// <summary>
+        /// Находит фильм, чей рейтинг больше остальных
+        /// </summary>
+        /// <param name="Movies"> Коллекция фильмов</param>
+        /// <returns> Возвращает индекс элемента, чей рейтинг больше остальных</returns>
+        private int FindMovieWithMaxRating(Movie[] Movies)
+        {
+            int maxRatingIndex = 0;
+            double maxValue = Movies[0].Rating;
+            for (int i = 0; i < ElementsCount; i++)
+            {
+                if (Movies[i].Rating > maxValue)
+                {
+                    maxValue = Movies[i].Rating;
+                    maxRatingIndex = i;
+                }
+            }
+
+            return maxRatingIndex;
+        }
+
         /// <summary>
         /// Создает коллекцию фильмов <see cref="CreateMovies"/>
         /// </summary>
@@ -79,26 +101,8 @@ namespace Programming.View.Control
             int findMaxRatingIndex = FindMovieWithMaxRating(_movies);
             MovieListBox.SelectedIndex = findMaxRatingIndex;
         }
-        /// <summary>
-        /// Находит фильм, чей рейтинг больше остальных
-        /// </summary>
-        /// <param name="Movies"> Коллекция фильмов</param>
-        /// <returns> Возвращает индекс элемента, чей рейтинг больше остальных</returns>
-        private int FindMovieWithMaxRating(Movie[] Movies)
-        {
-            int maxRatingIndex = 0;
-            double maxValue = Movies[0].Rating;
-            for (int i = 0; i < ElementsCount; i++)
-            {
-                if (Movies[i].Rating > maxValue)
-                {
-                    maxValue = Movies[i].Rating;
-                    maxRatingIndex = i;
-                }
-            }
 
-            return maxRatingIndex;
-        }
+       
 
         private void YearReleaseMovieTextBox_TextChanged_1(object sender, EventArgs e)
         {

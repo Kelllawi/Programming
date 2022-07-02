@@ -81,6 +81,11 @@
     <Compile Include="Model\Enums\Manufacture.cs" />
     <Compile Include="Model\Enums\Weekday.cs" />
     <Compile Include="Model\Enums\Genre.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="View\Control\EnumsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,14 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -183,18 +183,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\rectangle_add_24x24.png" />
-    <None Include="Resources\rectangle_remove_24x24_uncolor1.png" />
-    <None Include="Resources\rectangle_remove_24x241.png" />
-    <None Include="Resources\rectangle_edit_24x24_uncolor1.png" />
-    <None Include="Resources\rectangle_edit_24x241.png" />
-    <None Include="Resources\rectangle_add_24x24_uncolor1.png" />
-    <None Include="Resources\rectangle_add_24x241.png" />
-    <Content Include="Resources\rectangle_add_24x24_uncolor.png" />
+    <None Include="Resources\rectangle_remove_24x24_uncolor.png" />
+    <None Include="Resources\rectangle_remove_24x24.png" />
+    <None Include="Resources\rectangle_add_24x24.png" />
+    <None Include="Resources\rectangle_add_24x24_uncolor.png" />
     <Content Include="Resources\rectangle_edit_24x24.png" />
     <Content Include="Resources\rectangle_edit_24x24_uncolor.png" />
-    <Content Include="Resources\rectangle_remove_24x24.png" />
-    <Content Include="Resources\rectangle_remove_24x24_uncolor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

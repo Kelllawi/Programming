@@ -15,16 +15,19 @@
         /// Количество минут
         /// </summary>
         private int _minutes;
+
         /// <summary>
         /// Количество секунд
         /// </summary>
         private int _seconds;
+
         /// <summary>
         /// Созадет экземпляр класса <see cref="Time"/>
         /// </summary>
         public Time()
         {
         }
+
         /// <summary>
         /// Созадет экземпляр класса <see cref="Time"/>
         /// </summary>
@@ -60,6 +63,7 @@
                 _hours = value;
             }
         }
+
         /// <summary>
         /// Возвращает и задает количество минут До 59
         /// </summary>
@@ -80,6 +84,7 @@
                 _minutes = value;
             }
         }
+
         /// <summary>
         /// Возвращает и задает количество секунд До 59
         /// </summary>

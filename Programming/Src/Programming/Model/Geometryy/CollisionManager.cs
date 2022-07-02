@@ -20,6 +20,7 @@ namespace Programming.Model.Geometryy
                 rectangle1.Center.Y < rectangle2.Center.Y + rectangle2.Height &&
                 rectangle1.Height + rectangle1.Center.Y > rectangle2.Center.Y;
         }
+
         /// <summary>
         /// Проверяет пересечение двух колец
         /// </summary>

@@ -31,6 +31,5 @@ namespace Programming.View.Controls
             }
         }
 
-       
     }
 }
