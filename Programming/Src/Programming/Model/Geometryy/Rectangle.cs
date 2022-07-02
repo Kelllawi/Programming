@@ -38,8 +38,8 @@
         /// <summary>
         /// Создает экземпляр класса <see cref="Rectangle"/>
         /// </summary>
-        /// <param name="height"> Высота прямоугольника</param>
-        /// <param name="width">Ширина Прямоугольника</param>
+        /// <param name="height"> Высота прямоугольника Положительное число</param>
+        /// <param name="width">Ширина Прямоугольника Положительное число</param>
         /// <param name="color">Цвет прямоугольника</param>
         /// <param name="center"> Координаты прямоугольника</param>
         public Rectangle(int height,
@@ -79,7 +79,7 @@
         /// <summary>
         /// Предоставляет информацию о прямоугольника
         /// </summary>
-        /// <returns>Выводит id X Y W H</returns>
+        /// <returns>Выводит строку вида id: (X; Y; W; H)</returns>
         public string GetRectangleInfo()
         {
             return $"{_id}: (X={Center.X}; Y={Center.Y}; W={_width}; H={_height})";

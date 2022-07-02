@@ -31,9 +31,9 @@
         /// <summary>
         /// Созадет экземпляр класса <see cref="Time"/>
         /// </summary>
-        /// <param name="hours">Количество часов</param>
-        /// <param name="minutes">количество минут</param>
-        /// <param name="seconds">количество секунди</param>
+        /// <param name="hours">Количество часов Должно быть в пределах от 0 до 23</param>
+        /// <param name="minutes">количество минут Должно быть в пределах от 0 до 59</param>
+        /// <param name="seconds">количество секунди Должно быть в пределах от 0 до 59</param>
         public Time(int hours,
             int minutes,
             int seconds)

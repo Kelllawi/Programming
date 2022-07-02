@@ -109,7 +109,7 @@
             this.DurationMinutesMovieTextBox.Name = "DurationMinutesMovieTextBox";
             this.DurationMinutesMovieTextBox.Size = new System.Drawing.Size(100, 20);
             this.DurationMinutesMovieTextBox.TabIndex = 24;
-            this.DurationMinutesMovieTextBox.TextChanged += new System.EventHandler(this.DurationMinutesMovieTextBox_TextChanged_1);
+            this.DurationMinutesMovieTextBox.TextChanged += new System.EventHandler(this.DurationMinutesMovieTextBox_TextChanged);
             // 
             // DurationMinutesMovieLabel
             // 
@@ -126,7 +126,7 @@
             this.YearReleaseMovieTextBox.Name = "YearReleaseMovieTextBox";
             this.YearReleaseMovieTextBox.Size = new System.Drawing.Size(100, 20);
             this.YearReleaseMovieTextBox.TabIndex = 22;
-            this.YearReleaseMovieTextBox.TextChanged += new System.EventHandler(this.YearReleaseMovieTextBox_TextChanged_1);
+            this.YearReleaseMovieTextBox.TextChanged += new System.EventHandler(this.YearReleaseMovieTextBox_TextChanged);
             // 
             // YearReleaseMovieLabel
             // 

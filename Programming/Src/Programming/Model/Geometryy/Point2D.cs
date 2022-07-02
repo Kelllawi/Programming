@@ -18,8 +18,8 @@
         /// <summary>
         /// Создает экземпляр класса <see cref="Point2D"/>
         /// </summary>
-        /// <param name="x">Координата X</param>
-        /// <param name="y"> Координата Y</param>
+        /// <param name="x">Координата X Положительное число</param>
+        /// <param name="y"> Координата Y Положительное число</param>
         public Point2D(int x, int y)
         {
             X = x;

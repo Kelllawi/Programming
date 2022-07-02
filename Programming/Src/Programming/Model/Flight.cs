@@ -23,7 +23,7 @@
         /// </summary>
         /// <param name="departure">Место отправление</param>
         /// <param name="destination">Место назначения</param>
-        /// <param name="flightTimeMinutes"> Длительность полета в минутах</param>
+        /// <param name="flightTimeMinutes"> Длительность полета в минутах Положительно число</param>
         /// 
         public Flight(string departure,
             string destination,
@@ -46,6 +46,7 @@
 
         /// <summary>
         /// Возвращает и задает длительнсоть полета в минутах
+        /// Положительное число
         /// </summary>
         public int FlightTimeMinutes
         {

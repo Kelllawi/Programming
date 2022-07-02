@@ -104,7 +104,7 @@ namespace Programming.View.Control
 
        
 
-        private void YearReleaseMovieTextBox_TextChanged_1(object sender, EventArgs e)
+        private void YearReleaseMovieTextBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -122,7 +122,7 @@ namespace Programming.View.Control
             YearReleaseMovieTextBox.BackColor = Colors.CorrectColor;
         }
 
-        private void DurationMinutesMovieTextBox_TextChanged_1(object sender, EventArgs e)
+        private void DurationMinutesMovieTextBox_TextChanged(object sender, EventArgs e)
         {
             
             try

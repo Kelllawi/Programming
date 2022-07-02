@@ -7,7 +7,7 @@
     public class Song
     {
         /// <summary>
-        /// Дилтельность песни в секундах
+        /// Дилтельность песни в секундах 
         /// </summary>
         private int _durationSeconds;
 
@@ -23,7 +23,7 @@
         /// </summary>
         /// <param name="artist">Имя исполнителя</param>
         /// <param name="name">Название песни</param>
-        /// <param name="durationSeconds">Длительность в секундах</param>
+        /// <param name="durationSeconds">Длительность в секундах Положительно число</param>
         public Song(string artist,
             string name,
             int durationSeconds)
@@ -45,6 +45,7 @@
 
         /// <summary>
         /// Возвращает и задает длительность песни в секундах
+        /// Положительно число
         /// </summary>
         public int DurationSeconds
         {

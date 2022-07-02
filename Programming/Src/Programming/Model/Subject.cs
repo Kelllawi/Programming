@@ -22,7 +22,7 @@
         /// Созадет экземпляр класса <see cref="Subject"/>
         /// </summary>
         /// <param name="name">Имя ученика</param>
-        /// <param name="mark">Оценка по дисциплине</param>
+        /// <param name="mark">Оценка по дисциплине От 1 до 5</param>
         public Subject(string name,
             int mark)
         {
@@ -36,7 +36,7 @@
         public string Name { get; set; }
 
         /// <summary>
-        /// возвращает и задает оценку по дисциплине
+        /// возвращает и задает оценку по дисциплине от 1 до 5
         /// </summary>
         public int Mark
         {

@@ -21,8 +21,10 @@ namespace Programming.Model.Geometryy
         /// Созадет экземпляр класса <see cref="Ring"/>
         /// </summary>
         /// <param name="center"> Координаты цента кольца</param>
-        /// <param name="outerRadius"> Внешний радиус</param>
-        /// <param name="innerRadius"> Внутренний радиус</param>
+        /// <param name="outerRadius"> Внешний радиус.Положительное число
+        /// Должен быть больше внутреннего радиуса</param>
+        /// <param name="innerRadius"> Внутренний радиус.Положительное число
+        /// Долдно быть меньше внешнего радиуса</param>
         public Ring(Point2D center,
             double outerRadius,
             double innerRadius)
@@ -38,8 +40,8 @@ namespace Programming.Model.Geometryy
         public Point2D Center { get; set; }
 
         /// <summary>
-        /// Возвращает и задает внещний радиус кольца 
-        /// Больше внутреннего
+        /// Возвращает и задает внешний радиус кольца Положительное число
+        /// Должен быть больше внутреннего радиуса
         /// </summary>
         public double OuterRadius
         {
@@ -58,7 +60,7 @@ namespace Programming.Model.Geometryy
 
         /// <summary>
         /// Возвращает и задает внутренний радиус колько Положительно число
-        /// Меньше внешнего кольца
+        /// Должно быть меньше внешнего радиуса
         /// </summary>
         public double InnerRadius
         {
@@ -73,7 +75,9 @@ namespace Programming.Model.Geometryy
                 _innerRadius = value;
             }
         }
-
+        /// <summary>
+        /// Возвращает площадь кольца.
+        /// </summary>
         public double Area
         {
             get

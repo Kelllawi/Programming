@@ -17,20 +17,23 @@ namespace Programming.Model.Geometryy
        /// Генератор случайных чисел
        /// </summary>
         private static readonly Random _random = new Random();
+
         /// <summary>
         /// Минимальный размер прямоугольника
         /// </summary>
         private const int MinSize = 10;
+
         /// <summary>
         /// максимальный размер прямоугольника
         /// </summary>
         private const int MaxSize = 100;
+
         /// <summary>
         /// Создает прямоугольник внутри панели
         /// </summary>
-        /// <param name="canvasWidth">Ширина панели</param>
-        /// <param name="canvasHeight"> Длина панели</param>
-        /// <returns> Возвращает экземпляр Rectangle </returns>
+        /// <param name="canvasWidth">Граница создания по ширине</param>
+        /// <param name="canvasHeight"> Граница создания по высоте</param>
+        /// <returns> Возвращает экземпляр Rectangle со случайными значениями  </returns>
         public static Rectangle Randomize(int canvasWidth, int canvasHeight)
         {
             var rectangleHeight = _random.Next(MinSize, MaxSize);
@@ -47,10 +50,11 @@ namespace Programming.Model.Geometryy
                 rectanglePosition
                 );
         }
+
         /// <summary>
-        /// Создает прямоугольник
+        /// Создает прямоугольник 
         /// </summary>
-        /// <returns>Возвращает экземпляр Rectangle</returns>
+        /// <returns>Возвращает экземпляр Rectangle со случайными значениями</returns>
         public static Rectangle Randomize()
         {
             var colors = Enum.GetValues(typeof(Colors));
