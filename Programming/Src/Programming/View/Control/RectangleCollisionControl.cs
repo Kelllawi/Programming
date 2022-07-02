@@ -17,6 +17,7 @@ namespace Programming.View.Control
         /// Коллекция прямоугольников
         /// </summary>
         private List<Rectangle> _rectangle = new List<Rectangle>();
+
         /// <summary>
         /// Выбранный прямоугольник
         /// </summary>
@@ -34,25 +35,6 @@ namespace Programming.View.Control
             InitializeComponent();
         }
 
-        private void AddRectangleButton_MouseMove(object sender, MouseEventArgs e)
-        {
-            AddRectangleButton.Image = Properties.Resources.rectangle_add_24x24;
-        }
-
-        private void AddRectangleButton_MouseLeave(object sender, EventArgs e)
-        {
-            AddRectangleButton.Image = Properties.Resources.rectangle_add_24x24_uncolor;
-        }
-
-        private void RemoveRectangleButton_MouseMove(object sender, MouseEventArgs e)
-        {
-            RemoveRectangleButton.Image = Properties.Resources.rectangle_remove_24x24;
-        }
-
-        private void RemoveRectangleButton_MouseLeave(object sender, EventArgs e)
-        {
-            RemoveRectangleButton.Image = Properties.Resources.rectangle_remove_24x24_uncolor;
-        }
         /// <summary>
         /// Обновляет информацию в списке
         /// </summary>
@@ -62,6 +44,7 @@ namespace Programming.View.Control
             int index = AddingRectaglesListBox.FindString(rectangle.Id.ToString());
             AddingRectaglesListBox.Items[index] = rectangle.GetRectangleInfo();
         }
+
         /// <summary>
         /// Находит пересечение прямоугольников 
         /// При пересечений красит в красный
@@ -85,6 +68,30 @@ namespace Programming.View.Control
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Обновляет информацию в списке
+        /// </summary>
+        private void UpdateListBoexs()
+        {
+            AddingRectaglesListBox.Items.Clear();
+
+            for (int i = 0; i < _rectangle.Count; i++)
+            {
+                AddingRectaglesListBox.Items.Add(_rectangle[i].GetRectangleInfo());
+            }
+
+            AddingRectaglesListBox.SelectedIndex = _rectangle.Count - 1;
+        }
+
+        private void Clearinfo()
+        {
+            IdTextBox.Clear();
+            XTextBox.Clear();
+            YTextBox.Clear();
+            WidthTextBox.Clear();
+            HeightTextBox.Clear();
         }
 
 
@@ -141,28 +148,7 @@ namespace Programming.View.Control
                 Clearinfo();
             }
         }
-        /// <summary>
-        /// Обновляет информацию в списке
-        /// </summary>
-        private void UpdateListBoexs()
-        {
-            AddingRectaglesListBox.Items.Clear();
-
-            for (int i = 0; i < _rectangle.Count; i++)
-            {
-                AddingRectaglesListBox.Items.Add(_rectangle[i].GetRectangleInfo());
-            }
-
-            AddingRectaglesListBox.SelectedIndex = _rectangle.Count - 1;
-        }
-        private void Clearinfo()
-        {
-            IdTextBox.Clear();
-            XTextBox.Clear();
-            YTextBox.Clear();
-            WidthTextBox.Clear();
-            HeightTextBox.Clear();
-        }
+       
 
         private void XTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -244,6 +230,25 @@ namespace Programming.View.Control
                 HeightTextBox.BackColor = Colors.ErrorColor;
             }
 
+        }
+        private void AddRectangleButton_MouseMove(object sender, MouseEventArgs e)
+        {
+            AddRectangleButton.Image = Properties.Resources.rectangle_add_24x24;
+        }
+
+        private void AddRectangleButton_MouseLeave(object sender, EventArgs e)
+        {
+            AddRectangleButton.Image = Properties.Resources.rectangle_add_24x24_uncolor;
+        }
+
+        private void RemoveRectangleButton_MouseMove(object sender, MouseEventArgs e)
+        {
+            RemoveRectangleButton.Image = Properties.Resources.rectangle_remove_24x24;
+        }
+
+        private void RemoveRectangleButton_MouseLeave(object sender, EventArgs e)
+        {
+            RemoveRectangleButton.Image = Properties.Resources.rectangle_remove_24x24_uncolor;
         }
     }
 }
