@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieApp.Model
 {
-    /// <summary>
+    ///<summary>
     /// Хранит данные о фильме.
     /// </summary>
     public class Movie

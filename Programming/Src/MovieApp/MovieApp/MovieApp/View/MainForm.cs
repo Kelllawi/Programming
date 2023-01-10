@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,12 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MovieApp.Model;
+using MovieApp.Model.Enums;
 
 namespace MovieApp
 {
     public partial class MainForm : Form
     {
-
         /// <summary>
         /// Коллекция фильмов.
         /// </summary>
@@ -209,12 +210,12 @@ namespace MovieApp
             }
         }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Serializer.Serialize(_movies);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             _movies.AddRange(Serializer.Deserialize());
             for (int i = 0; i < _movies.Count; i++)
@@ -222,6 +223,21 @@ namespace MovieApp
                 MovieListBox.Items.Add(GetMovieInfo(_movies[i]));
             }
         }
+
+        private void MovieGenreComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (MovieListBox.SelectedIndex == -1) return;
+
+            try
+            {
+                _currentMovie.Genre = MovieGenreComboBox.SelectedItem.ToString();
+                SortingMovies();
+                UpdateInfo(_movies.IndexOf(_currentMovie));
+            }
+            catch
+            {
+                MovieReleaseYearTextBox.BackColor =Color.Red;
+            }
+        }
     }
-}
 }
