@@ -41,7 +41,9 @@
             this.MovieNameTextBox = new System.Windows.Forms.TextBox();
             this.MovieListBox = new System.Windows.Forms.ListBox();
             this.MovieDeleteButton = new System.Windows.Forms.Button();
-            this.MovieAddBotton = new System.Windows.Forms.Button();
+            this.MovieAddButton = new System.Windows.Forms.Button();
+            this.SearchLabel = new System.Windows.Forms.Label();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.MovieGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             this.MovieGroupBox.Controls.Add(this.MovieRatingTextBox);
             this.MovieGroupBox.Controls.Add(this.MovieReleaseYearTextBox);
             this.MovieGroupBox.Controls.Add(this.MovieNameTextBox);
-            this.MovieGroupBox.Location = new System.Drawing.Point(281, 12);
+            this.MovieGroupBox.Location = new System.Drawing.Point(281, 48);
             this.MovieGroupBox.Name = "MovieGroupBox";
             this.MovieGroupBox.Size = new System.Drawing.Size(281, 214);
             this.MovieGroupBox.TabIndex = 5;
@@ -154,7 +156,7 @@
             // MovieListBox
             // 
             this.MovieListBox.FormattingEnabled = true;
-            this.MovieListBox.Location = new System.Drawing.Point(12, 12);
+            this.MovieListBox.Location = new System.Drawing.Point(12, 34);
             this.MovieListBox.Name = "MovieListBox";
             this.MovieListBox.Size = new System.Drawing.Size(248, 329);
             this.MovieListBox.TabIndex = 4;
@@ -162,33 +164,59 @@
             // 
             // MovieDeleteButton
             // 
-            this.MovieDeleteButton.Location = new System.Drawing.Point(93, 361);
+            this.MovieDeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MovieDeleteButton.Image = global::MovieApp.Properties.Resources.cross_circle_24x24;
+            this.MovieDeleteButton.Location = new System.Drawing.Point(93, 381);
             this.MovieDeleteButton.Name = "MovieDeleteButton";
             this.MovieDeleteButton.Size = new System.Drawing.Size(75, 23);
             this.MovieDeleteButton.TabIndex = 7;
-            this.MovieDeleteButton.Text = "button2";
             this.MovieDeleteButton.UseVisualStyleBackColor = true;
             this.MovieDeleteButton.Click += new System.EventHandler(this.MovieDeleteButton_Click);
+            this.MovieDeleteButton.MouseEnter += new System.EventHandler(this.MovieDeleteButton_MouseEnter);
+            this.MovieDeleteButton.MouseLeave += new System.EventHandler(this.MovieDeleteButton_MouseLeave);
             // 
-            // MovieAddBotton
+            // MovieAddButton
             // 
-            this.MovieAddBotton.Location = new System.Drawing.Point(12, 361);
-            this.MovieAddBotton.Name = "MovieAddBotton";
-            this.MovieAddBotton.Size = new System.Drawing.Size(75, 23);
-            this.MovieAddBotton.TabIndex = 6;
-            this.MovieAddBotton.Text = "button1";
-            this.MovieAddBotton.UseVisualStyleBackColor = true;
-            this.MovieAddBotton.Click += new System.EventHandler(this.MovieAddBotton_Click);
+            this.MovieAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MovieAddButton.Image = global::MovieApp.Properties.Resources.add_24x24;
+            this.MovieAddButton.Location = new System.Drawing.Point(12, 381);
+            this.MovieAddButton.Name = "MovieAddButton";
+            this.MovieAddButton.Size = new System.Drawing.Size(75, 23);
+            this.MovieAddButton.TabIndex = 6;
+            this.MovieAddButton.UseVisualStyleBackColor = true;
+            this.MovieAddButton.Click += new System.EventHandler(this.MovieAddButton_Click);
+            this.MovieAddButton.MouseEnter += new System.EventHandler(this.MovieAddButton_MouseEnter);
+            this.MovieAddButton.MouseLeave += new System.EventHandler(this.MovieAddButton_MouseLeave);
+            // 
+            // SearchLabel
+            // 
+            this.SearchLabel.AutoSize = true;
+            this.SearchLabel.Location = new System.Drawing.Point(9, 12);
+            this.SearchLabel.Name = "SearchLabel";
+            this.SearchLabel.Size = new System.Drawing.Size(50, 13);
+            this.SearchLabel.TabIndex = 8;
+            this.SearchLabel.Text = "Search  :";
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.Location = new System.Drawing.Point(92, 9);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(130, 20);
+            this.SearchTextBox.TabIndex = 9;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SearchTextBox);
+            this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.MovieGroupBox);
             this.Controls.Add(this.MovieListBox);
             this.Controls.Add(this.MovieDeleteButton);
-            this.Controls.Add(this.MovieAddBotton);
+            this.Controls.Add(this.MovieAddButton);
             this.Name = "MainForm";
             this.Text = "MoviesApp";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
@@ -196,6 +224,7 @@
             this.MovieGroupBox.ResumeLayout(false);
             this.MovieGroupBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -214,7 +243,9 @@
         private System.Windows.Forms.TextBox MovieNameTextBox;
         private System.Windows.Forms.ListBox MovieListBox;
         private System.Windows.Forms.Button MovieDeleteButton;
-        private System.Windows.Forms.Button MovieAddBotton;
+        private System.Windows.Forms.Button MovieAddButton;
+        private System.Windows.Forms.Label SearchLabel;
+        private System.Windows.Forms.TextBox SearchTextBox;
     }
 }
 

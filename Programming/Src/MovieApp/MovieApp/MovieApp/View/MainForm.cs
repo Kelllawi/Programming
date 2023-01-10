@@ -118,7 +118,7 @@ namespace MovieApp
                        select Movie).ToList();
         }
 
-        private void MovieAddBotton_Click(object sender, EventArgs e)
+        private void MovieAddButton_Click(object sender, EventArgs e)
         {
             var movie = new Movie();
             _movies.Add(movie);
@@ -201,12 +201,12 @@ namespace MovieApp
             try
             {
                 _currentMovie.DurationTimeInMinutes = int.Parse(MovieDurationTextBox.Text);
-                MovieRatingTextBox.BackColor = Color.FromArgb(255, 255, 255);
+                MovieDurationTextBox.BackColor = Color.FromArgb(255, 255, 255);
                 UpdateInfo(_movies.IndexOf(_currentMovie));
             }
             catch
             {
-                MovieRatingTextBox.BackColor = Color.Red;
+                MovieDurationTextBox.BackColor = Color.Red;
             }
         }
 
@@ -238,6 +238,33 @@ namespace MovieApp
             {
                 MovieReleaseYearTextBox.BackColor =Color.Red;
             }
+        }
+
+        private void MovieAddButton_MouseEnter(object sender, EventArgs e)
+        {
+            MovieAddButton.Image = MovieApp.Properties.Resources.add_24x24_black;
+        }
+
+        private void MovieAddButton_MouseLeave(object sender, EventArgs e)
+        {
+            MovieAddButton.Image = MovieApp.Properties.Resources.add_24x24;
+        }
+
+        private void MovieDeleteButton_MouseEnter(object sender, EventArgs e)
+        {
+            MovieDeleteButton.Image = MovieApp.Properties.Resources.cross_circle_24x24_black;
+        }
+
+        private void MovieDeleteButton_MouseLeave(object sender, EventArgs e)
+        {
+            MovieDeleteButton.Image = MovieApp.Properties.Resources.cross_circle_24x24;
+        }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            _searchText = SearchTextBox.Text;
+            ClearInfo();
+            UpdateInfo(-1);
         }
     }
 }
