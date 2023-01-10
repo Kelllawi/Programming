@@ -39,6 +39,13 @@ namespace MovieApp
 
 
         }
+
+        /// <summary>
+        /// Организует поиск полей у объектов,
+        /// удовлетворяющих введенному в строку значению.
+        /// </summary>
+        /// <param name="searchText">Строка по которой нужно искать.</param>
+        /// <returns>Список объектов подходящих под введенную строку.</returns>
         private List<Movie> SearchMovies()
         {
             var result = from movie in _movies
@@ -51,6 +58,22 @@ namespace MovieApp
 
             return result.ToList();
         }
+
+        /// <summary>
+        /// Сортировка _movies.
+        /// </summary>
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            _searchText = SearchTextBox.Text;
+            ClearInfo();
+            UpdateInfo(-1);
+        }
+
+        /// <summary>
+        /// Обновляет данные в списке MoviesListBox.
+        /// </summary>
+        /// <param name="index">Индекс выбранного элемента.</param>
+
         private void UpdateInfo(int index)
         {
             List<Movie> movies;
@@ -76,6 +99,10 @@ namespace MovieApp
             if (-1 <= index && index < MovieListBox.Items.Count)
                 MovieListBox.SelectedIndex = index;
         }
+
+        /// <summary>
+        /// Очищает поля для вывода информации.
+        /// </summary>
         private void ClearInfo()
         {
             MovieListBox.SelectedIndex = -1;
@@ -260,11 +287,6 @@ namespace MovieApp
             MovieDeleteButton.Image = MovieApp.Properties.Resources.cross_circle_24x24;
         }
 
-        private void SearchTextBox_TextChanged(object sender, EventArgs e)
-        {
-            _searchText = SearchTextBox.Text;
-            ClearInfo();
-            UpdateInfo(-1);
-        }
+        
     }
 }
