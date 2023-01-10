@@ -18,10 +18,11 @@ namespace ObjectOrientedPractics.Services
 
         public static void AssertValueInRange(double value , double min, double max, string fieldname) 
         {
-            if (!( value >= min )||(!(value<=max))
-                {
+            if (!( value >= min )||(!(value<=max)))
+            {
                 throw new ArgumentException($"Value in {fieldname} must be greater than {min} and less than {max}");
             }
         }
     }
 }
+

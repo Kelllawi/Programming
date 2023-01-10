@@ -26,16 +26,16 @@ namespace ObjectOrientedPractics.Model
         private string Name
         {
             get { return _name; }
-            set 
+            set
             {
                 Validator.AssertStringOnLength(value, 200, nameof(Name));
-                    _name =value;
+                _name = value;
             }
-    }
+        }
         private string Info
         {
             get { return _info; }
-            set 
+            set
             {
                 Validator.AssertStringOnLength(_info, 1000, nameof(Info));
                 _info = value;
@@ -43,27 +43,28 @@ namespace ObjectOrientedPractics.Model
         }
         private double Cost
         {
-            get { return _cost; } 
-            set 
+            get { return _cost; }
+            set
             {
                 Validator.AssertValueInRange(value, 0, 10000, nameof(Cost));
                 _cost = value;
             }
         }
 
-        public Item(int Id,string Name, string Info, double Cost)
+        public Item(int Id, string Name, string Info, double Cost)
         {
-            _ItemsId =IdGenerator.GetNextId();
+            _ItemsId = IdGenerator.GetNextId();
             Name = _name;
-            Info=_info;
-            Cost=_cost;
+            Info = _info;
+            Cost = _cost;
 
         }
         public Item()
         {
             _ItemsId = IdGenerator.GetNextId();
-            Name= "Empty";
-            Info= "Empty";
-            Cost= 0;
+            Name = "Empty";
+            Info = "Empty";
+            Cost = 0;
         }
+    }
 }
