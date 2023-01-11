@@ -18,7 +18,7 @@ namespace ObjectOrientedPractics.View.Tabs
 
         private Item _currentitem;
 
-        private List<Item> itemsdata= new List<Item>();
+        private ToolTip _toolTip = new ToolTip();
 
 
         public ItemsTabs()
@@ -82,6 +82,53 @@ namespace ObjectOrientedPractics.View.Tabs
             ItemsListBox.Items.RemoveAt(ItemsListBox.SelectedIndex);
 
 
+        }
+
+        private void CostTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                _currentitem.Cost=Convert.ToDouble(CostTextBox.Text);
+                CostTextBox.BackColor=Color.White;
+                
+            }
+            catch(Exception ex) 
+            {
+                _toolTip.SetToolTip(CostTextBox, ex.Message);
+                CostTextBox.BackColor= Color.Red;
+            }
+        }
+
+        private void NameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                _currentitem.Name= Convert.ToString(NameTextBox.Text);
+                NameTextBox.BackColor= Color.White;
+
+            }
+            catch(Exception ex)
+            {
+                _toolTip.SetToolTip(NameTextBox,ex.Message);
+                NameTextBox.BackColor= Color.Red;
+            }
+
+        }
+
+        private void DescriptionTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                _currentitem.Info= Convert.ToString(DescriptionTextBox.Text);
+                DescriptionTextBox.BackColor= Color.White;
+
+            }
+            catch(Exception ex)
+            {
+                _toolTip.SetToolTip(DescriptionTextBox,ex.Message);
+                DescriptionTextBox.BackColor= Color.Red;
+
+            }
         }
     }
 }

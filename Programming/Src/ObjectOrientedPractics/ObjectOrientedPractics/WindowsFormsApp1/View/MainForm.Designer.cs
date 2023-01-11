@@ -33,9 +33,12 @@
             // 
             // itemsTabs1
             // 
-            this.itemsTabs1.Location = new System.Drawing.Point(1, -4);
+            this.itemsTabs1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.itemsTabs1.Location = new System.Drawing.Point(1, 12);
             this.itemsTabs1.Name = "itemsTabs1";
-            this.itemsTabs1.Size = new System.Drawing.Size(800, 530);
+            this.itemsTabs1.Size = new System.Drawing.Size(800, 514);
             this.itemsTabs1.TabIndex = 0;
             // 
             // MainForm

@@ -94,8 +94,10 @@
             // 
             // IdTextBox
             // 
+            this.IdTextBox.BackColor = System.Drawing.SystemColors.Control;
             this.IdTextBox.Location = new System.Drawing.Point(340, 38);
             this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.ReadOnly = true;
             this.IdTextBox.Size = new System.Drawing.Size(457, 20);
             this.IdTextBox.TabIndex = 6;
             // 
@@ -105,6 +107,7 @@
             this.CostTextBox.Name = "CostTextBox";
             this.CostTextBox.Size = new System.Drawing.Size(457, 20);
             this.CostTextBox.TabIndex = 7;
+            this.CostTextBox.TextChanged += new System.EventHandler(this.CostTextBox_TextChanged);
             // 
             // NameTextBox
             // 
@@ -113,6 +116,7 @@
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(491, 127);
             this.NameTextBox.TabIndex = 8;
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // DescriptionTextBox
             // 
@@ -121,6 +125,7 @@
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(491, 127);
             this.DescriptionTextBox.TabIndex = 9;
+            this.DescriptionTextBox.TextChanged += new System.EventHandler(this.DescriptionTextBox_TextChanged);
             // 
             // IdLabel
             // 
