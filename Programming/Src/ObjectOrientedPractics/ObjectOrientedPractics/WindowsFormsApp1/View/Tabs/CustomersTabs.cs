@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.View.Tabs
 {
-    public partial class UserControl1 : UserControl
+    public partial class CustomersTabs : UserControl
     {
-        public UserControl1()
+        public CustomersTabs()
         {
             InitializeComponent();
         }

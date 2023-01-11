@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1.View.Tabs
 {
-    partial class UserControl1
+    partial class CustomersTabs
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // CustomersTabs
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "CustomersTabs";
+            this.Size = new System.Drawing.Size(800, 530);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
