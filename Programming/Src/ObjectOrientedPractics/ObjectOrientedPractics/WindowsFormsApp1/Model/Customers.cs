@@ -18,7 +18,7 @@ namespace ObjectOrientedPractics.Model
             get { return _customersId; }
         }
 
-        private string FullName
+        public string FullName
         {
             get { return _fullName; }
             set
@@ -27,7 +27,7 @@ namespace ObjectOrientedPractics.Model
                 _fullName= value;
             }
         }
-        private string Address
+       public string Address
         { get { return _address; } 
             set
             {
