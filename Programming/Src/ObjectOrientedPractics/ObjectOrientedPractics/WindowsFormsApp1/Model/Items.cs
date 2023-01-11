@@ -18,30 +18,33 @@ namespace ObjectOrientedPractics.Model
 
         private double _cost;
 
-        private int Id
+        public int Id
         {
             get { return _ItemsId; }
         }
 
-        private string Name
+        public string Name
         {
-            get { return _name; }
+            get 
+            { 
+                return _name; 
+            }
             set
             {
                 Validator.AssertStringOnLength(value, 200, nameof(Name));
                 _name = value;
             }
         }
-        private string Info
+        public string Info
         {
             get { return _info; }
             set
             {
-                Validator.AssertStringOnLength(_info, 1000, nameof(Info));
+                Validator.AssertStringOnLength(value, 1000, nameof(Info));
                 _info = value;
             }
         }
-        private double Cost
+        public double Cost
         {
             get { return _cost; }
             set

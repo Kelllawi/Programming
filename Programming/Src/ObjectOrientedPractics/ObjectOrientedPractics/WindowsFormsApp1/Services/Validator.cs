@@ -10,7 +10,7 @@ namespace ObjectOrientedPractics.Services
     {
         public static void AssertStringOnLength(string @string, int value, string fieldname )
         {
-            if ( @string.Length<value )
+            if ( @string.Length>value )
             {
                 throw new ArgumentException($"{fieldname} can't be more than{value} characters");
             }

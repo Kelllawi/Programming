@@ -28,21 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.itemsTabs1 = new ObjectOrientedPractics.View.Tabs.ItemsTabs();
             this.SuspendLayout();
+            // 
+            // itemsTabs1
+            // 
+            this.itemsTabs1.Location = new System.Drawing.Point(1, -4);
+            this.itemsTabs1.Name = "itemsTabs1";
+            this.itemsTabs1.Size = new System.Drawing.Size(800, 530);
+            this.itemsTabs1.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(814, 521);
+            this.Controls.Add(this.itemsTabs1);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "ObjectOrientedPractics";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private View.Tabs.ItemsTabs itemsTabs1;
     }
 }
 
