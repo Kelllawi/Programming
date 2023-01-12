@@ -10,19 +10,37 @@ namespace ObjectOrientedPractics.Model
 {
     internal class Item
     {
+        /// <summary>
+        /// Уникальный модификатор
+        /// </summary>
         private readonly int _ItemsId;
 
+        /// <summary>
+        /// Название товара
+        /// </summary>
         private string _name;
 
+        /// <summary>
+        /// Описание товара
+        /// </summary>
         private string _info;
 
+        /// <summary>
+        /// Стоимость товара 
+        /// </summary>
         private double _cost;
 
+        /// <summary>
+        /// Возвращает уникальный модификатор
+        /// </summary>
         public int Id
         {
             get { return _ItemsId; }
         }
 
+        /// <summary>
+        /// Возвращает название товара 
+        /// </summary>
         public string Name
         {
             get 
@@ -35,6 +53,9 @@ namespace ObjectOrientedPractics.Model
                 _name = value;
             }
         }
+        /// <summary>
+        /// Возвращает информацию товара 
+        /// </summary>
         public string Info
         {
             get { return _info; }
@@ -44,6 +65,10 @@ namespace ObjectOrientedPractics.Model
                 _info = value;
             }
         }
+
+        /// <summary>
+        /// Возвращает стоимость товара 
+        /// </summary>
         public double Cost
         {
             get { return _cost; }
@@ -54,6 +79,13 @@ namespace ObjectOrientedPractics.Model
             }
         }
 
+        /// <summary>
+        /// Создает экземпляр класса <see cref="Item"/>
+        /// </summary>
+        /// <param name="Id">Уникальный индетификатор.</param>
+        /// <param name="Name">Название товара. Должно быть меньше 200 символов.</param>
+        /// <param name="Info">Описание товара. Должно быть меньше 1000 символов.</param>
+        /// <param name="Cost">Цена товара. Должна быть в пределах от 0 до 100 000.</param>
         public Item(int Id, string Name, string Info, double Cost)
         {
             _ItemsId = IdGenerator.GetNextId();
@@ -62,6 +94,10 @@ namespace ObjectOrientedPractics.Model
             Cost = _cost;
 
         }
+
+        /// <summary>
+        /// Создает экземпляр класса <see cref="Item"/>.
+        /// </summary>
         public Item()
         {
             _ItemsId = IdGenerator.GetNextId();
