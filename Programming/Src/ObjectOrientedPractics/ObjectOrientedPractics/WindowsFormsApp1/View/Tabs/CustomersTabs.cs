@@ -62,9 +62,12 @@ namespace ObjectOrientedPractics.View.Tabs
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            _customer.Add(new Customers());
+            var customers= new Customers();
+            _customer.Add(customers);
             _currentCustomers=_customer.Last();
             CustomersListBox.Items.Add(_currentCustomers);
+            UpdateTextBox(_currentCustomers);
+
 
             
         }
@@ -76,10 +79,7 @@ namespace ObjectOrientedPractics.View.Tabs
             CustomersListBox.Items.RemoveAt(CustomersListBox.SelectedIndex);
         }
 
-        private void CustomerIdTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void FullNameTextBox_TextChanged(object sender, EventArgs e)
         {

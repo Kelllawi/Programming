@@ -23,7 +23,7 @@ namespace ObjectOrientedPractics.Model
             get { return _fullName; }
             set
             {
-                Validator.AssertStringOnLength(FullName, 200, nameof(FullName));
+                Validator.AssertStringOnLength(value, 200, nameof(FullName));
                 _fullName= value;
             }
         }
@@ -31,23 +31,23 @@ namespace ObjectOrientedPractics.Model
         { get { return _address; } 
             set
             {
-                Validator.AssertStringOnLength(Address, 500, nameof(Address));
+                Validator.AssertStringOnLength(value, 500, nameof(Address));
                 _address= value;
             }
         }
 
-        public Customers(int id,string fullName, string address)
+        public Customers(int id,string FullName, string address)
         {
             _customersId= IdGenerator.GetNextCustomersId();
-            fullName = _fullName;
+            FullName = _fullName;
             address = _address;
 
         }
         public Customers()
         {
             _customersId= IdGenerator.GetNextCustomersId();
-            FullName= "FullName";
-            Address = "Address";
+            FullName= "Empty";
+            Address = "Empty";
         }
 
 

@@ -56,9 +56,9 @@
             // 
             this.AddButton.Location = new System.Drawing.Point(6, 461);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(90, 50);
+            this.AddButton.Size = new System.Drawing.Size(90, 40);
             this.AddButton.TabIndex = 2;
-            this.AddButton.Text = "button1";
+            this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
@@ -66,9 +66,9 @@
             // 
             this.RemoveButton.Location = new System.Drawing.Point(102, 461);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(90, 50);
+            this.RemoveButton.Size = new System.Drawing.Size(90, 40);
             this.RemoveButton.TabIndex = 3;
-            this.RemoveButton.Text = "button2";
+            this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = true;
             this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
@@ -189,7 +189,7 @@
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.ItemsListBox);
             this.Name = "ItemsTabs";
-            this.Size = new System.Drawing.Size(800, 530);
+            this.Size = new System.Drawing.Size(800, 509);
             this.ResumeLayout(false);
             this.PerformLayout();
 
