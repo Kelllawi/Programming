@@ -62,12 +62,10 @@ namespace ObjectOrientedPractics.View.Tabs
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            var customers= new Customers();
-            _customer.Add(customers);
+            _customer.Add(new Customers());
             _currentCustomers=_customer.Last();
-            CustomersListBox.Items.Add(_currentCustomers);
+            CustomersListBox.Items.Add(_currentCustomers.FullName);
             UpdateTextBox(_currentCustomers);
-
 
             
         }
