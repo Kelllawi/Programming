@@ -114,6 +114,7 @@
             this.CustomerIdTextBox.Name = "CustomerIdTextBox";
             this.CustomerIdTextBox.Size = new System.Drawing.Size(456, 20);
             this.CustomerIdTextBox.TabIndex = 9;
+         
             // 
             // FullNameTextBox
             // 
