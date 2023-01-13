@@ -20,10 +20,19 @@ namespace ObjectOrientedPractics.View.Tabs
 
         private ToolTip _toolTip = new ToolTip();
 
+       
 
         public ItemsTabs()
         {
             InitializeComponent();
+
+
+            CategoryComboBox.DataSource = Enum.GetValues(typeof(Category));
+            
+            if (ItemsListBox.Items.Count != 0) 
+            {
+                ItemsListBox.SelectedIndex = 0;
+            }
         }
         private void ClearItemsTextBox()
         {
@@ -33,6 +42,21 @@ namespace ObjectOrientedPractics.View.Tabs
             DescriptionTextBox.Text = "";
           
         }
+
+        private void UpdateListBox(int index)
+        {
+            List<Item> items=_items;
+            ItemsListBox.Items.Clear();
+            foreach (var item in items)
+            {
+                if (item.Name !=null)
+                {
+                    ItemsListBox.Items.Add($"{item.Name}");
+                }
+               
+            }
+            ItemsListBox.SelectedIndex = index;
+        }
         private void UpdateTextBox(Item item)
         {
             _currentitem = item;
@@ -40,6 +64,7 @@ namespace ObjectOrientedPractics.View.Tabs
             CostTextBox.Text=_currentitem.Cost.ToString();
             NameTextBox.Text=_currentitem.Name.ToString();
             DescriptionTextBox.Text=_currentitem.Info.ToString();
+            CategoryComboBox.SelectedItem = item.category;
 
 
         }
@@ -72,6 +97,10 @@ namespace ObjectOrientedPractics.View.Tabs
             } 
             _currentitem= _items[ItemsListBox.SelectedIndex];
             UpdateTextBox(_currentitem);
+           
+
+            
+          
 
         }
 
@@ -105,6 +134,7 @@ namespace ObjectOrientedPractics.View.Tabs
             {
                 _currentitem.Name= Convert.ToString(NameTextBox.Text);
                 NameTextBox.BackColor= Color.White;
+                UpdateListBox(_items.IndexOf(_currentitem));
 
             }
             catch(Exception ex)
@@ -128,6 +158,24 @@ namespace ObjectOrientedPractics.View.Tabs
                 _toolTip.SetToolTip(DescriptionTextBox,ex.Message);
                 DescriptionTextBox.BackColor= Color.Red;
 
+            }
+        }
+
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_currentitem == null)
+                {
+                    return;
+                }
+                _currentitem.category=(Category)CategoryComboBox.SelectedItem;
+
+            }
+            catch(Exception ex)
+            {
+                _toolTip.SetToolTip(CategoryComboBox,ex.Message);  
+                CategoryComboBox.BackColor= Color.Red;
             }
         }
     }

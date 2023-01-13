@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ObjectOrientedPractics.Model
 {
-    internal class Item
+    public class Item
     {
         private readonly int _ItemsId;
 
@@ -17,6 +17,8 @@ namespace ObjectOrientedPractics.Model
         private string _info;
 
         private double _cost;
+
+        
 
         public int Id
         {
@@ -54,12 +56,16 @@ namespace ObjectOrientedPractics.Model
             }
         }
 
-        public Item(int Id, string Name, string Info, double Cost)
+        public Category category { get; set; }
+        
+
+        public Item(int Id, string Name, string Info, double Cost, int categoryindex)
         {
             _ItemsId = IdGenerator.GetNextId();
             Name = _name;
             Info = _info;
             Cost = _cost;
+            category = (Category)categoryindex;
 
         }
         public Item()
@@ -68,6 +74,7 @@ namespace ObjectOrientedPractics.Model
             Name = "Empty";
             Info = "Empty";
             Cost = 0;
+            category = 0;
         }
     }
 }
