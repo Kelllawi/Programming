@@ -28,6 +28,17 @@ namespace ObjectOrientedPractics.View.Control
           set { _address = value; }
         }
 
+
+        public void UpdateAddress()
+        {
+            PostIndexTextBox.Text=address.Index.ToString(); 
+            CountryTextBox.Text=address.Country.ToString();
+            CityTextBox.Text=address.City.ToString();
+            BuildingTextBox.Text=address.Building.ToString();
+            StreetTextBox.Text=address.Street.ToString();
+            ApartmenTextBox.Text=address.Apartament.ToString();
+        }
+
         private void PostIndexTextBox_TextChanged(object sender, EventArgs e)
         {
             try

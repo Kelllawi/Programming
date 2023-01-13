@@ -104,7 +104,7 @@
             this.CustomerIdTextBox.Name = "CustomerIdTextBox";
             this.CustomerIdTextBox.Size = new System.Drawing.Size(100, 20);
             this.CustomerIdTextBox.TabIndex = 9;
-            this.CustomerIdTextBox.TextChanged += new System.EventHandler(this.CustomerIdTextBox_TextChanged);
+         
             // 
             // FullNameTextBox
             // 

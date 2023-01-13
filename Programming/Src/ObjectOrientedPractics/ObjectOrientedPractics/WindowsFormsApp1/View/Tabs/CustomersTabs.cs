@@ -20,9 +20,31 @@ namespace ObjectOrientedPractics.View.Tabs
 
         private ToolTip _toolTip = new ToolTip();
 
+        public List<Customers> Customers
+        { get 
+            {
+                return _customer;
+            } 
+            set 
+            {
+                _customer = value;
+                UpdateListBox();
+            }
+        }
+
+        public void UpdateListBox()
+        {
+            CustomersListBox.Items.Clear();
+            for (int i = 0; i < _customer.Count; i++)
+            {
+                CustomersListBox.Items.Add(_customer[i].FullName);
+            }
+        }
+
         public CustomersTabs()
         {
             InitializeComponent();
+            _customer = Customers;
         }
 
         private void ClearCustomerTextBox()
@@ -37,6 +59,9 @@ namespace ObjectOrientedPractics.View.Tabs
             _currentCustomers= customers;
             CustomerIdTextBox.Text=_currentCustomers.Id.ToString();
             FullNameTextBox.Text=_currentCustomers.FullName.ToString();
+            addressContorl1.address =customers.Address;
+            addressContorl1.UpdateAddress();
+
          
         }
 
@@ -64,7 +89,7 @@ namespace ObjectOrientedPractics.View.Tabs
         {
             _customer.Add(new Customers());
             _currentCustomers=_customer.Last();
-            CustomersListBox.Items.Add(_currentCustomers);
+            CustomersListBox.Items.Add(_currentCustomers.FullName);
 
             
         }
@@ -76,10 +101,7 @@ namespace ObjectOrientedPractics.View.Tabs
             CustomersListBox.Items.RemoveAt(CustomersListBox.SelectedIndex);
         }
 
-        private void CustomerIdTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void FullNameTextBox_TextChanged(object sender, EventArgs e)
         {

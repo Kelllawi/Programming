@@ -19,6 +19,7 @@ namespace ObjectOrientedPractics.Model
         private string _building;
         private string _apartament;
 
+
         public int Index 
         { get
             {

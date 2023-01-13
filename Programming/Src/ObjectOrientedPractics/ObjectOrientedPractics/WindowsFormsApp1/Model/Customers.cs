@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ObjectOrientedPractics.Model
 {
-    internal class Customers
+    public class Customers
     {
         private readonly int _customersId;
         private  string _fullName;
-        private  string _address;
+        private Address _address;
 
         public int Id
         {
@@ -27,27 +27,28 @@ namespace ObjectOrientedPractics.Model
                 _fullName= value;
             }
         }
-       public string Address
-        { get { return _address; } 
-            set
+       public Address Address
+        {
+            get
             {
-                Validator.AssertStringOnLength(value, 500, nameof(Address));
-                _address= value;
+                return _address;
             }
+            set { _address= value; }
         }
 
-        public Customers(int id,string fullName, string address)
+        public Customers(int id,string fullName, int index, string Country,string City,string Street,string Building, string Apartment)
         {
             _customersId= IdGenerator.GetNextCustomersId();
             fullName = _fullName;
-            address = _address;
+            Address=new Address(index,Country,City,Street,Building,Apartment);
+            
 
         }
         public Customers()
         {
             _customersId= IdGenerator.GetNextCustomersId();
             FullName= "FullName";
-            Address = "Address";
+            Address=new Address();
         }
 
 
