@@ -26,7 +26,7 @@ namespace ObjectOrientedPractics.Model
             } 
             set
             { 
-                Validator.AssertValueInRange(value,0,6,nameof(_index)); 
+                Validator.AssertValueInRange(value,10000,999999,nameof(_index)); 
                 _index = value;
             } 
         }

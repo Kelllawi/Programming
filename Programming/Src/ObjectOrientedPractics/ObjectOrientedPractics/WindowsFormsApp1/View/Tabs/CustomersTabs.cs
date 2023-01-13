@@ -29,7 +29,7 @@ namespace ObjectOrientedPractics.View.Tabs
         {
             CustomerIdTextBox.Text = "";
             FullNameTextBox.Text = "";
-            AddressTextBox.Text = "";
+          
 
         }
         private void UpdateTextBox(Customers customers)
@@ -37,7 +37,7 @@ namespace ObjectOrientedPractics.View.Tabs
             _currentCustomers= customers;
             CustomerIdTextBox.Text=_currentCustomers.Id.ToString();
             FullNameTextBox.Text=_currentCustomers.FullName.ToString();
-            AddressTextBox.Text=_currentCustomers.Address.ToString();
+         
         }
 
         private void CustomersListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -97,19 +97,6 @@ namespace ObjectOrientedPractics.View.Tabs
             }
         }
 
-        private void AddressTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                _currentCustomers.Address=Convert.ToString(AddressTextBox.Text);
-                AddressTextBox.BackColor=Color.White;
-
-            }
-            catch(Exception ex)
-            {
-                _toolTip.SetToolTip(AddressTextBox, ex.Message);
-                AddressTextBox.BackColor=Color.Red;
-            }
-        }
+      
     }
 }

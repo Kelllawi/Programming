@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ObjectOrientedPractics.Model.Address address1 = new ObjectOrientedPractics.Model.Address();
             this.IdLabel = new System.Windows.Forms.Label();
-            this.AddressLabel = new System.Windows.Forms.Label();
             this.FullNameLabel = new System.Windows.Forms.Label();
             this.CustomersListBox = new System.Windows.Forms.ListBox();
             this.AddButton = new System.Windows.Forms.Button();
@@ -37,8 +37,8 @@
             this.CustomersLabel = new System.Windows.Forms.Label();
             this.CustomerIdTextBox = new System.Windows.Forms.TextBox();
             this.FullNameTextBox = new System.Windows.Forms.TextBox();
-            this.AddressTextBox = new System.Windows.Forms.TextBox();
             this.SelectedCustomerLabel = new System.Windows.Forms.Label();
+            this.addressContorl1 = new ObjectOrientedPractics.View.Control.AddressContorl();
             this.SuspendLayout();
             // 
             // IdLabel
@@ -49,15 +49,6 @@
             this.IdLabel.Size = new System.Drawing.Size(24, 13);
             this.IdLabel.TabIndex = 0;
             this.IdLabel.Text = "ID :";
-            // 
-            // AddressLabel
-            // 
-            this.AddressLabel.AutoSize = true;
-            this.AddressLabel.Location = new System.Drawing.Point(262, 90);
-            this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(45, 13);
-            this.AddressLabel.TabIndex = 2;
-            this.AddressLabel.Text = "Address";
             // 
             // FullNameLabel
             // 
@@ -123,15 +114,6 @@
             this.FullNameTextBox.TabIndex = 10;
             this.FullNameTextBox.TextChanged += new System.EventHandler(this.FullNameTextBox_TextChanged);
             // 
-            // AddressTextBox
-            // 
-            this.AddressTextBox.Location = new System.Drawing.Point(262, 106);
-            this.AddressTextBox.Multiline = true;
-            this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(519, 130);
-            this.AddressTextBox.TabIndex = 11;
-            this.AddressTextBox.TextChanged += new System.EventHandler(this.AddressTextBox_TextChanged);
-            // 
             // SelectedCustomerLabel
             // 
             this.SelectedCustomerLabel.AutoSize = true;
@@ -142,12 +124,26 @@
             this.SelectedCustomerLabel.TabIndex = 12;
             this.SelectedCustomerLabel.Text = "SelectedCustomer";
             // 
+            // addressContorl1
+            // 
+            address1.Apartament = "Empty";
+            address1.Building = "Empty";
+            address1.City = "Empty";
+            address1.Country = "Empty";
+            address1.Index = 10000;
+            address1.Street = "Empty";
+            this.addressContorl1.address = address1;
+            this.addressContorl1.Location = new System.Drawing.Point(262, 86);
+            this.addressContorl1.Name = "addressContorl1";
+            this.addressContorl1.Size = new System.Drawing.Size(535, 200);
+            this.addressContorl1.TabIndex = 13;
+            // 
             // CustomersTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.addressContorl1);
             this.Controls.Add(this.SelectedCustomerLabel);
-            this.Controls.Add(this.AddressTextBox);
             this.Controls.Add(this.FullNameTextBox);
             this.Controls.Add(this.CustomerIdTextBox);
             this.Controls.Add(this.CustomersLabel);
@@ -155,7 +151,6 @@
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.CustomersListBox);
             this.Controls.Add(this.FullNameLabel);
-            this.Controls.Add(this.AddressLabel);
             this.Controls.Add(this.IdLabel);
             this.Name = "CustomersTabs";
             this.Size = new System.Drawing.Size(800, 530);
@@ -167,7 +162,6 @@
         #endregion
 
         private System.Windows.Forms.Label IdLabel;
-        private System.Windows.Forms.Label AddressLabel;
         private System.Windows.Forms.Label FullNameLabel;
         private System.Windows.Forms.ListBox CustomersListBox;
         private System.Windows.Forms.Button AddButton;
@@ -175,7 +169,7 @@
         private System.Windows.Forms.Label CustomersLabel;
         private System.Windows.Forms.TextBox CustomerIdTextBox;
         private System.Windows.Forms.TextBox FullNameTextBox;
-        private System.Windows.Forms.TextBox AddressTextBox;
         private System.Windows.Forms.Label SelectedCustomerLabel;
+        private Control.AddressContorl addressContorl1;
     }
 }

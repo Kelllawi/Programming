@@ -52,6 +52,12 @@
     <Compile Include="Model\Items.cs" />
     <Compile Include="Services\IdGenerator.cs" />
     <Compile Include="Services\Validator.cs" />
+    <Compile Include="View\Control\AddressContorl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Control\AddressContorl.Designer.cs">
+      <DependentUpon>AddressContorl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Control\AddressContorl.resx">
+      <DependentUpon>AddressContorl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
