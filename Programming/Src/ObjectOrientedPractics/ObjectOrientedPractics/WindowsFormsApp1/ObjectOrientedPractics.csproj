@@ -50,6 +50,7 @@
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Customers.cs" />
     <Compile Include="Model\Items.cs" />
+    <Compile Include="Model\Store.cs" />
     <Compile Include="Services\IdGenerator.cs" />
     <Compile Include="Services\Validator.cs" />
     <Compile Include="View\Control\AddressContorl.cs">

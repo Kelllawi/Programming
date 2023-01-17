@@ -107,8 +107,9 @@ namespace ObjectOrientedPractics.View.Tabs
         {
             try
             {
-                _currentCustomers.FullName=Convert.ToString(FullNameTextBox.Text);
+               _currentCustomers.FullName= FullNameTextBox.Text;
                 FullNameTextBox.BackColor=Color.White;
+                CustomersListBox.Items[CustomersListBox.SelectedIndex]= FullNameTextBox.Text;
 
             }
             catch(Exception ex)

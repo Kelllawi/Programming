@@ -25,13 +25,22 @@ namespace ObjectOrientedPractics.View.Tabs
         public ItemsTabs()
         {
             InitializeComponent();
-
+            _items = Items;
 
             CategoryComboBox.DataSource = Enum.GetValues(typeof(Category));
             
             if (ItemsListBox.Items.Count != 0) 
             {
                 ItemsListBox.SelectedIndex = 0;
+            }
+        }
+        public List<Item> Items
+        {
+            get { return _items; }
+            set 
+            {
+                _items = value;
+                UpdateListBox();
             }
         }
         private void ClearItemsTextBox()
@@ -43,19 +52,14 @@ namespace ObjectOrientedPractics.View.Tabs
           
         }
 
-        private void UpdateListBox(int index)
+        private void UpdateListBox()
         {
-            List<Item> items=_items;
-            ItemsListBox.Items.Clear();
-            foreach (var item in items)
+           ItemsListBox.Items.Clear();
+            for (int i=0;i<_items.Count;i++)
             {
-                if (item.Name !=null)
-                {
-                    ItemsListBox.Items.Add($"{item.Name}");
-                }
-               
+                ItemsListBox.Items.Add(_items[i].Name);
             }
-            ItemsListBox.SelectedIndex = index;
+
         }
         private void UpdateTextBox(Item item)
         {
@@ -132,9 +136,10 @@ namespace ObjectOrientedPractics.View.Tabs
         {
             try
             {
-                _currentitem.Name= Convert.ToString(NameTextBox.Text);
-                NameTextBox.BackColor= Color.White;
-                UpdateListBox(_items.IndexOf(_currentitem));
+                _currentitem.Name = NameTextBox.Text;
+                NameTextBox.BackColor=Color.White;
+                ItemsListBox.Items[ItemsListBox.SelectedIndex] = NameTextBox.Text;
+              
 
             }
             catch(Exception ex)
