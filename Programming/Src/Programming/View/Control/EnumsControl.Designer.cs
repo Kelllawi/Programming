@@ -39,7 +39,7 @@
             // ValueListBox
             // 
             this.ValueListBox.FormattingEnabled = true;
-            this.ValueListBox.Location = new System.Drawing.Point(5, 24);
+            this.ValueListBox.Location = new System.Drawing.Point(161, 21);
             this.ValueListBox.Name = "ValueListBox";
             this.ValueListBox.Size = new System.Drawing.Size(150, 199);
             this.ValueListBox.TabIndex = 10;
@@ -65,7 +65,7 @@
             // EnumListBox
             // 
             this.EnumListBox.FormattingEnabled = true;
-            this.EnumListBox.Location = new System.Drawing.Point(161, 24);
+            this.EnumListBox.Location = new System.Drawing.Point(8, 21);
             this.EnumListBox.Name = "EnumListBox";
             this.EnumListBox.Size = new System.Drawing.Size(150, 199);
             this.EnumListBox.TabIndex = 9;
