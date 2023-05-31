@@ -9,12 +9,12 @@ namespace MovieApp.Model
     public static class Validator
     {
         /// <summary>
-        /// Проверяет, что строка состоит только из букв английского алфавита.
+        /// Проверяет, что строка состоит только из букв алфавита.
         /// </summary>
         /// <param name="value">Значение.</param>
         /// <param name="propertyName">Имя свойства, откуда был вызван метод.</param>
         /// <exception cref="ArgumentException">
-        /// Ошибка, когда в строке есть цифры или буквы не английского алфавита.</exception>
+        /// Ошибка, когда в строке есть цифры</exception>
         public static void AssertStringContainsOnlyLetters(string value, string propertyName)
         {
             foreach (var i in value)
