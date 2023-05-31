@@ -59,7 +59,7 @@
             this.MovieGroupBox.Controls.Add(this.MovieRatingTextBox);
             this.MovieGroupBox.Controls.Add(this.MovieReleaseYearTextBox);
             this.MovieGroupBox.Controls.Add(this.MovieNameTextBox);
-            this.MovieGroupBox.Location = new System.Drawing.Point(281, 48);
+            this.MovieGroupBox.Location = new System.Drawing.Point(285, 34);
             this.MovieGroupBox.Name = "MovieGroupBox";
             this.MovieGroupBox.Size = new System.Drawing.Size(281, 214);
             this.MovieGroupBox.TabIndex = 5;
